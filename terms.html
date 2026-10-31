@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Extended Terms and Conditions Addendum for Indo Pakhtoon Tech — Additional legal provisions, supplementary policies, and user rights information." />
+  <title>Terms and Conditions (Extended) — Indo Pakhtoon Tech</title>
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary:        #1a3c5e;
+      --primary-light:  #2a5f8f;
+      --accent:         #e8a020;
+      --accent-light:   #f5c55a;
+      --bg:             #f4f6f9;
+      --surface:        #ffffff;
+      --surface-alt:    #eef1f6;
+      --text-main:      #1c1c2e;
+      --text-muted:     #4a5568;
+      --text-light:     #718096;
+      --border:         #d0d8e4;
+      --success:        #276749;
+      --warning-bg:     #fffbeb;
+      --warning-border: #f6ad55;
+      --info-bg:        #ebf8ff;
+      --info-border:    #63b3ed;
+      --radius-sm:      6px;
+      --radius-md:      12px;
+      --radius-lg:      20px;
+      --shadow-sm:      0 1px 4px rgba(0,0,0,0.08);
+      --shadow-md:      0 4px 20px rgba(0,0,0,0.10);
+      --shadow-lg:      0 8px 40px rgba(0,0,0,0.13);
+      --font-sans:      'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono:      'Courier New', Courier, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ===== CONTINUATION BANNER ===== */
+    .continuation-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #ffffff;
+      padding: 40px 24px 36px;
+      text-align: center;
+    }
+
+    .continuation-banner .banner-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.30);
+      border-radius: 50px;
+      padding: 5px 16px;
+      font-size: 0.76rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .continuation-banner h1 {
+      font-size: clamp(1.4rem, 4vw, 2.1rem);
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      line-height: 1.25;
+    }
+
+    .continuation-banner h1 span { color: var(--accent-light); }
+
+    .continuation-banner p {
+      margin-top: 10px;
+      font-size: 0.91rem;
+      opacity: 0.82;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    /* ===== SECTION CARDS ===== */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+      scroll-margin-top: 20px;
+      transition: box-shadow 0.25s;
+    }
+
+    section:hover { box-shadow: var(--shadow-md); }
+
+    @media (max-width: 640px) {
+      section { padding: 22px 16px; }
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .section-heading-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+
+    section h2 {
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.3;
+    }
+
+    section h3 {
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin: 22px 0 10px;
+    }
+
+    section h4 {
+      font-size: 0.97rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 16px 0 8px;
+    }
+
+    section p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      font-size: 0.97rem;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul, section ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+
+    section ul li, section ol li {
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+    }
+
+    section ul li::marker { color: var(--accent); }
+    section ol li::marker { color: var(--primary); font-weight: 700; }
+
+    /* ===== CALLOUT BOXES ===== */
+    .callout {
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 18px 0;
+      font-size: 0.93rem;
+      border-left: 4px solid;
+    }
+
+    .callout-warning {
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: #744210;
+    }
+
+    .callout-info {
+      background: var(--info-bg);
+      border-color: var(--info-border);
+      color: #2a4a6b;
+    }
+
+    .callout-success {
+      background: #f0fff4;
+      border-color: #68d391;
+      color: #22543d;
+    }
+
+    .callout-danger {
+      background: #fff5f5;
+      border-color: #fc8181;
+      color: #742a2a;
+    }
+
+    .callout strong { font-weight: 700; }
+
+    /* ===== POLICY TABLE ===== */
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      margin: 16px 0;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+    }
+
+    .policy-table th {
+      background: var(--primary);
+      color: #fff;
+      text-align: left;
+      padding: 11px 15px;
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .policy-table td {
+      padding: 10px 15px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .policy-table tr:nth-child(even) td { background: var(--surface-alt); }
+    .policy-table tr:last-child td { border-bottom: none; }
+
+    /* ===== BADGE / CHIP ===== */
+    .chip {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50px;
+      padding: 2px 10px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    .chip-accent  { background: var(--accent); color: #1c1c2e; }
+    .chip-success { background: #276749; }
+    .chip-danger  { background: #c53030; }
+
+    /* ===== STEP LIST ===== */
+    .step-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0;
+    }
+
+    .step-list li {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      background: var(--accent);
+      color: #1c1c2e;
+      border-radius: 50%;
+      font-size: 0.78rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-content {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    .step-content strong { color: var(--text-main); }
+
+    /* ===== HIGHLIGHT BOX ===== */
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+      border: 1px solid #c3d3f7;
+      border-radius: var(--radius-md);
+      padding: 22px 26px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p {
+      color: #2d3a70;
+      font-size: 0.96rem;
+      margin-bottom: 0;
+    }
+
+    .highlight-box strong { color: #1a2c6b; }
+
+    /* ===== DIVIDER ===== */
+    hr.fancy {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), transparent);
+      margin: 24px 0;
+      border-radius: 2px;
+    }
+
+    hr.light {
+      border: none;
+      height: 1px;
+      background: var(--border);
+      margin: 20px 0;
+    }
+
+    /* ===== RIGHTS GRID ===== */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .rights-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 18px;
+    }
+
+    .rights-card .rights-icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .rights-card h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0 0 6px;
+    }
+
+    .rights-card p {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin: 0;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: rgba(255,255,255,0.75);
+      text-align: center;
+      padding: 40px 24px 30px;
+      font-size: 0.875rem;
+      line-height: 1.75;
+    }
+
+    footer strong { color: var(--accent-light); }
+
+    footer .footer-brand {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.3px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    footer .footer-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 18px auto;
+      max-width: 500px;
+    }
+
+    footer .footer-seal {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-sm);
+      padding: 8px 20px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 12px;
+      letter-spacing: 0.4px;
+    }
+
+    footer .footer-bottom {
+      margin-top: 18px;
+      font-size: 0.81rem;
+      color: rgba(255,255,255,0.50);
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== CONTINUATION BANNER ===== -->
+  <header class="continuation-banner">
+    <div class="banner-badge">Supplementary Legal Provisions</div>
+    <h1>Terms and Conditions — <span>Continued</span></h1>
+    <p>Indo Pakhtoon Tech  |  Uttar Pradesh, India  |  Effective: June 1, 2025  |  Version 1.0</p>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- ══════════════════════════════════════════════
+         SECTION A — ACCEPTABLE USE POLICY (EXTENDED)
+    ══════════════════════════════════════════════ -->
+    <section id="sec-aup">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">A</span>
+        <h2>Acceptable Use Policy (Extended) <span class="chip">Supplementary</span></h2>
+      </div>
+
+      <p>
+        This Acceptable Use Policy ("AUP") is a supplementary extension of Section 5 (Prohibited Activities) of the principal Terms document and sets out in further detail the standards of conduct expected of every User of the Indo Pakhtoon Tech Platform. This AUP applies to all Services, including but not limited to web-based utility tools, calculator applications, gaming resource platforms, digital toolkits, and all native Android applications published under the Indo Pakhtoon Tech brand.
+      </p>
+
+      <h3>A.1 General Standards of Conduct</h3>
+      <p>
+        Every User of the Platform is expected to act responsibly, ethically, and in good faith. The Platform is designed to serve individual users seeking utility, productivity, and entertainment through digital tools. Users are expected to:
+      </p>
+      <ul>
+        <li>Use the Services only for lawful purposes in compliance with all applicable local, state, national, and international laws and regulations;</li>
+        <li>Treat all other users, if any interactive features are present, with respect and dignity;</li>
+        <li>Report any security vulnerabilities, bugs, or misuse they discover to the support team promptly and responsibly, without exploiting such vulnerabilities for personal gain or to harm others;</li>
+        <li>Refrain from actions that impose an unreasonable or disproportionately large load on the Platform's infrastructure, servers, or bandwidth;</li>
+        <li>Not interfere with, circumvent, bypass, or disable any security features, rate limiting mechanisms, CAPTCHA systems, or access control systems deployed by Indo Pakhtoon Tech.</li>
+      </ul>
+
+      <h3>A.2 Responsible Disclosure Policy</h3>
+      <p>
+        Indo Pakhtoon Tech values the security research community and welcomes responsible disclosure of security vulnerabilities. If you discover a security issue affecting the Platform, please adhere to the following responsible disclosure process:
+      </p>
+      <ul class="step-list">
+        <li>
+          <span class="step-num">1</span>
+          <span class="step-content"><strong>Do not exploit the vulnerability.</strong> Do not access, modify, or delete data that does not belong to you, and do not use the vulnerability to disrupt Services.</span>
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <span class="step-content"><strong>Document the issue thoroughly.</strong> Prepare a clear description of the vulnerability, including steps to reproduce it, the potential impact, and any supporting evidence (screenshots, logs).</span>
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <span class="step-content"><strong>Contact us privately.</strong> Send your disclosure to <strong>security@indopakhtoontech.com</strong> with the subject line "Security Vulnerability Disclosure." Do not post vulnerability details publicly before we have had a reasonable opportunity to address the issue.</span>
+        </li>
+        <li>
+          <span class="step-num">4</span>
+          <span class="step-content"><strong>Allow reasonable time for remediation.</strong> We will acknowledge receipt within 72 hours and aim to provide a timeline for remediation within 14 business days.</span>
+        </li>
+        <li>
+          <span class="step-num">5</span>
+          <span class="step-content"><strong>Coordinated disclosure.</strong> After remediation, we may mutually agree upon a coordinated public disclosure timeline. We appreciate and credit researchers who follow this process.</span>
+        </li>
+      </ul>
+
+      <div class="callout callout-info">
+        <strong>ℹ Bug Bounty:</strong> While Indo Pakhtoon Tech does not currently operate a formal bug bounty program, the Developer may, at their sole discretion, acknowledge and reward researchers who responsibly disclose significant security vulnerabilities. Any such recognition is entirely voluntary and does not create any contractual obligation.
+      </div>
+
+      <h3>A.3 Automated Access & API Rate Limiting</h3>
+      <p>
+        Any programmatic or automated access to the Platform — including API calls, web scraping, headless browser automation, or scripted interactions — is prohibited without express prior written authorization from Indo Pakhtoon Tech. Any authorized API access granted in writing is subject to the following additional restrictions:
+      </p>
+      <ul>
+        <li>All authorized API consumers must identify themselves truthfully in request headers;</li>
+        <li>API rate limits, as communicated in any API authorization agreement, must be strictly observed;</li>
+        <li>API access keys or tokens must not be shared, published, or transferred to any third party;</li>
+        <li>Indo Pakhtoon Tech reserves the right to throttle, suspend, or revoke API access at any time without liability if misuse is detected;</li>
+        <li>Unauthorized circumvention of rate limits (e.g., rotating IP addresses, distributing requests across multiple accounts) constitutes a material violation of these Terms.</li>
+      </ul>
+
+      <h3>A.4 Content Standards (Where User-Generated Content Is Applicable)</h3>
+      <p>
+        In any current or future feature of the Platform that permits user-generated content (such as feedback forms, community features, review submissions, or support communications), users must not submit content that:
+      </p>
+      <ul>
+        <li>Is false, misleading, defamatory, or fraudulent;</li>
+        <li>Infringes any copyright, trademark, patent, trade secret, or other intellectual property right of any third party;</li>
+        <li>Contains personal information of third parties without their consent;</li>
+        <li>Is obscene, vulgar, sexually explicit, or offensive;</li>
+        <li>Promotes violence, discrimination, hatred, or illegal activity;</li>
+        <li>Contains unsolicited commercial communications (spam) or promotional content;</li>
+        <li>Includes malicious code, executable files, or harmful attachments.</li>
+      </ul>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION B — THIRD-PARTY SERVICES & INTEGRATIONS
+    ══════════════════════════════════════════════ -->
+    <section id="sec-thirdparty">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">B</span>
+        <h2>Third-Party Services, Integrations & External Links</h2>
+      </div>
+
+      <p>
+        The Indo Pakhtoon Tech Platform may incorporate, embed, reference, or provide links to third-party services, platforms, software development kits (SDKs), APIs, advertisements, and external websites that are not owned or controlled by Indo Pakhtoon Tech. This section governs your interactions with such third-party elements and clarifies Indo Pakhtoon Tech's responsibilities and limitations in this regard.
+      </p>
+
+      <h3>B.1 Third-Party Services Integrated Into the Platform</h3>
+      <p>
+        The following categories of third-party services may be integrated into one or more aspects of the Platform:
+      </p>
+
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Service Category</th>
+            <th>Provider Example</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Authentication</td>
+            <td>Google LLC (OAuth 2.0)</td>
+            <td>Secure user login and identity verification</td>
+          </tr>
+          <tr>
+            <td>Analytics</td>
+            <td>Google Analytics / Firebase Analytics</td>
+            <td>Understanding user behavior, improving UX</td>
+          </tr>
+          <tr>
+            <td>Crash Reporting</td>
+            <td>Firebase Crashlytics</td>
+            <td>Detecting and diagnosing application crashes</td>
+          </tr>
+          <tr>
+            <td>Advertising</td>
+            <td>Google AdMob</td>
+            <td>Displaying contextual ads in free-tier apps</td>
+          </tr>
+          <tr>
+            <td>Payment Processing</td>
+            <td>UPI Ecosystem (NPCI)</td>
+            <td>Processing voluntary user donations</td>
+          </tr>
+          <tr>
+            <td>App Distribution</td>
+            <td>Google Play Store</td>
+            <td>Distribution and in-app purchase billing for Android apps</td>
+          </tr>
+          <tr>
+            <td>Cloud Hosting</td>
+            <td>Various Providers</td>
+            <td>Web hosting, content delivery, and database services</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Each of these third-party services operates under its own independent terms of service, privacy policy, and legal agreements. By using the Platform, you acknowledge that your interactions with these third-party services are governed by their respective policies, and Indo Pakhtoon Tech bears no liability for the practices, content, or conduct of any third-party service provider.
+      </p>
+
+      <h3>B.2 Google Services — Special Notice</h3>
+      <p>
+        Indo Pakhtoon Tech's use of Google APIs and Google services, including Google Sign-In / OAuth 2.0, Google Analytics, Firebase, AdMob, and Google Play, is governed by <strong>Google's Terms of Service</strong> and <strong>Google API Services User Data Policy</strong>. Indo Pakhtoon Tech's use and transfer to any other app of information received from Google APIs will adhere to the <em>Google API Services User Data Policy</em>, including the Limited Use requirements.
+      </p>
+
+      <div class="callout callout-info">
+        <strong>ℹ Google API Limited Use Disclosure:</strong> Indo Pakhtoon Tech's application of information received from Google Sign-In is strictly limited to providing and improving user-facing features that are visible to the user within the Platform interface. We do not use Google user data to serve advertisements, transfer it to third parties for advertising purposes, allow humans to read user data (except for explicit user consent, security purposes, or legal compliance), or use it for any purpose that is inconsistent with the Google API Services User Data Policy.
+      </div>
+
+      <h3>B.3 External Links Disclaimer</h3>
+      <p>
+        The Platform may contain hyperlinks to external websites, resources, or content operated by third parties. Such links are provided solely for informational convenience and do not constitute an endorsement, sponsorship, or recommendation by Indo Pakhtoon Tech of the linked website, its operators, or its content. Indo Pakhtoon Tech:
+      </p>
+      <ul>
+        <li>Does not control or monitor the content, accuracy, privacy practices, or availability of any external website;</li>
+        <li>Makes no representations or warranties regarding external websites;</li>
+        <li>Is not liable for any loss or damage arising from your use of or reliance on any external website or its content;</li>
+        <li>Recommends that users review the terms and privacy policies of any external website before interacting with it.</li>
+      </ul>
+
+      <h3>B.4 Advertising & AdMob (Where Applicable)</h3>
+      <p>
+        Certain free-tier Android applications within the Platform ecosystem may display advertisements served by Google AdMob or similar advertising networks. These advertisements are served programmatically based on contextual signals and, where permitted, user interest data as managed by Google's advertising infrastructure. Indo Pakhtoon Tech does not manually select specific advertisements displayed to users. Users who prefer an ad-free experience may have the option to support the Platform through voluntary donations or, where available, in-app purchase of an ad-free mode.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION C — ANDROID APP SPECIFIC TERMS
+    ══════════════════════════════════════════════ -->
+    <section id="sec-android">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">C</span>
+        <h2>Android Application — Specific Terms & Conditions</h2>
+      </div>
+
+      <p>
+        This section sets out additional terms that apply specifically to users who download, install, and use any native Android application published by Indo Pakhtoon Tech on the <strong>Google Play Store</strong> or any other authorized distribution channel. These app-specific terms supplement — and do not replace — the general Terms set forth in the main document.
+      </p>
+
+      <h3>C.1 Application License</h3>
+      <p>
+        Subject to your compliance with these Terms, Indo Pakhtoon Tech grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download, install, and use any Indo Pakhtoon Tech Android application on a compatible Android device that you personally own or control, strictly for your personal, non-commercial purposes.
+      </p>
+
+      <h3>C.2 App Permissions</h3>
+      <p>
+        Indo Pakhtoon Tech's Android applications may request certain device permissions to deliver their intended functionality. All permission requests are governed by the principle of <strong>minimum necessary access</strong>. The following guidelines apply:
+      </p>
+      <ul>
+        <li>Permissions are requested only when genuinely required for a specific feature of the application;</li>
+        <li>Users will be shown Android's native permission dialog explaining the reason for each permission request;</li>
+        <li>Denying optional permissions will not result in denial of access to the application's core functionality (except where that specific permission is intrinsic to the app's primary function);</li>
+        <li>Permission data is never transmitted to third parties for purposes beyond what is disclosed in our Privacy Policy;</li>
+        <li>Users may revoke previously granted permissions at any time through Android device settings, although this may limit certain app features.</li>
+      </ul>
+
+      <div class="callout callout-info">
+        <strong>ℹ Common Permissions:</strong> Depending on the specific application, Indo Pakhtoon Tech apps may request permissions such as Internet access (for online features), storage access (for saving user data locally), camera or microphone access (only in apps with explicit media features), and notification access (for optional user-initiated alerts). No unnecessary or excessive permissions will ever be requested.
+      </div>
+
+      <h3>C.3 App Updates & Maintenance</h3>
+      <p>
+        Indo Pakhtoon Tech may release updates, patches, bug fixes, or new versions of its Android applications from time to time. These updates may be delivered automatically through Google Play or may require manual user action to install. Users are encouraged to keep applications updated to benefit from the latest security patches, performance improvements, and feature enhancements. Indo Pakhtoon Tech reserves the right to:
+      </p>
+      <ul>
+        <li>Modify, add, or remove features from applications without prior notice;</li>
+        <li>Discontinue support for older versions of applications after a reasonable notice period;</li>
+        <li>Deprecate or shut down an application entirely, with reasonable advance notice provided to users where possible.</li>
+      </ul>
+
+      <h3>C.4 Offline Functionality</h3>
+      <p>
+        Certain applications (such as offline calculator utilities and local digital tools) are designed to function without an active internet connection. For such applications, core offline functionality will continue to be available even without network access. However, features that inherently require internet connectivity — such as Google Sign-In, donation processing, leaderboard synchronization, or content updates — will not be available in offline mode.
+      </p>
+
+      <h3>C.5 Beta Testing & Pre-Release Applications</h3>
+      <p>
+        Indo Pakhtoon Tech may, at its discretion, offer pre-release or beta versions of applications through the Google Play Store's beta testing program or through direct APK distribution to selected testers. By participating in a beta program, you acknowledge that:
+      </p>
+      <ul>
+        <li>Beta applications may contain bugs, errors, incomplete features, and instabilities not present in the production version;</li>
+        <li>Beta features may be modified or removed before or after the final release;</li>
+        <li>Your feedback as a beta tester is voluntarily provided and may be used without compensation to improve the final product;</li>
+        <li>Beta participation does not create any contractual entitlement to continued access to beta features in the production release.</li>
+      </ul>
+
+      <h3>C.6 Google Play Store Compliance</h3>
+      <p>
+        All Indo Pakhtoon Tech Android applications are developed in compliance with the <strong>Google Play Developer Program Policies</strong> and the <strong>Google Play Developer Distribution Agreement</strong>. In the event of any conflict between these Terms and Google Play's policies as they relate to the app distribution relationship, Google Play's policies shall prevail to the extent of such conflict. Users who purchase or download applications through Google Play are additionally subject to Google Play's Terms of Service.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION D — DIGITAL TOOLS & CALCULATOR DISCLAIMER
+    ══════════════════════════════════════════════ -->
+    <section id="sec-tools">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">D</span>
+        <h2>Digital Tools & Calculator Applications — Accuracy Disclaimer</h2>
+      </div>
+
+      <p>
+        A core component of the Indo Pakhtoon Tech Platform is the provision of digital utility tools, including calculators, converters, estimators, and other computational applications. This section provides important information about the nature, accuracy, and appropriate use of such tools.
+      </p>
+
+      <h3>D.1 For Informational & Convenience Purposes Only</h3>
+      <p>
+        All calculator tools, unit converters, measurement utilities, gaming resource calculators, financial estimators, and any other computational tools provided through the Platform are offered strictly for <strong>general informational, educational, and convenience purposes only</strong>. They are not intended to provide, and should not be construed as, professional financial, legal, medical, engineering, or technical advice of any kind.
+      </p>
+
+      <div class="callout callout-warning">
+        <strong>⚠ Critical Disclaimer:</strong> Results generated by any calculator or utility tool on the Platform should not be used as the sole basis for making significant financial decisions, health-related decisions, legal judgments, technical specifications, or any other decision that could have serious consequences. Always consult a qualified professional for advice tailored to your specific circumstances.
+      </div>
+
+      <h3>D.2 Accuracy Limitations</h3>
+      <p>
+        While Indo Pakhtoon Tech makes reasonable efforts to ensure that its computational tools are accurate and use up-to-date data, formulas, and conversion factors, the following limitations must be acknowledged by all users:
+      </p>
+      <ul>
+        <li><strong>Rounding and Precision:</strong> Digital calculations may involve rounding at various stages, which can introduce minor discrepancies in results for high-precision applications;</li>
+        <li><strong>Formula Currency:</strong> Tax rates, exchange rates, legal thresholds, and other variable inputs used in calculators may become outdated as regulations or market conditions change. Users should verify that inputs reflect current standards;</li>
+        <li><strong>User Input Errors:</strong> Incorrect results arising from inaccurate data entered by the user are the sole responsibility of the user. The Platform performs calculations based on inputs as provided;</li>
+        <li><strong>Algorithm Assumptions:</strong> Certain tools may rely on simplified models or standardized assumptions that may not accurately reflect the complexity of real-world scenarios;</li>
+        <li><strong>Device-Specific Behavior:</strong> Floating-point arithmetic behavior may vary slightly across different device hardware and software configurations.</li>
+      </ul>
+
+      <h3>D.3 Gaming & App Resource Tools</h3>
+      <p>
+        Tools related to gaming resources, in-game currency calculators, app data estimators, or similar gaming-adjacent utilities are designed purely for entertainment, planning, and informational purposes. Indo Pakhtoon Tech does not guarantee the accuracy of any game-specific data, as game developers may change in-game mechanics, values, or economies at any time without notice. Indo Pakhtoon Tech is not affiliated with, endorsed by, or officially associated with any third-party game developer or publisher unless explicitly stated.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION E — USER RIGHTS & DATA SUBJECT RIGHTS
+    ══════════════════════════════════════════════ -->
+    <section id="sec-userrights">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">E</span>
+        <h2>User Rights & Data Subject Rights</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech recognizes and respects the rights of its users with respect to their personal data. In accordance with the <em>Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011</em>, the <em>Digital Personal Data Protection Act, 2023 (DPDPA)</em>, and internationally recognized data protection principles, users of the Platform have the following rights:
+      </p>
+
+      <div class="rights-grid">
+        <div class="rights-card">
+          <span class="rights-icon">👁️</span>
+          <h4>Right to Access</h4>
+          <p>You may request a copy of the personal data we hold about you at any time.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">✏️</span>
+          <h4>Right to Rectification</h4>
+          <p>You may request correction of inaccurate or incomplete personal data.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">🗑️</span>
+          <h4>Right to Erasure</h4>
+          <p>You may request deletion of your personal data subject to legal retention obligations.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">🚫</span>
+          <h4>Right to Object</h4>
+          <p>You may object to certain types of data processing, including analytics profiling.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">📦</span>
+          <h4>Right to Portability</h4>
+          <p>You may request your data in a structured, machine-readable format.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">⏸️</span>
+          <h4>Right to Restriction</h4>
+          <p>You may request restriction of processing of your data in certain circumstances.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">🔔</span>
+          <h4>Right to Be Informed</h4>
+          <p>You have the right to clear, transparent information about how your data is used.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">⚖️</span>
+          <h4>Right to Grievance</h4>
+          <p>You may lodge a complaint with us or with the relevant data protection authority.</p>
+        </div>
+      </div>
+
+      <h3>E.1 How to Exercise Your Rights</h3>
+      <p>
+        To exercise any of the above rights, please submit a written request to our support email address provided in Section 14 of the main Terms document. Your request should include:
+      </p>
+      <ul>
+        <li>Your full name and the email address associated with your Platform account;</li>
+        <li>A clear description of the right you wish to exercise and the specific data involved;</li>
+        <li>Sufficient information to verify your identity (to protect against fraudulent requests).</li>
+      </ul>
+      <p>
+        Indo Pakhtoon Tech will acknowledge your request within <strong>72 hours</strong> and fulfil it (or provide a reasoned explanation for any inability to do so) within <strong>30 calendar days</strong>. In cases of complexity or volume, this period may be extended by an additional 30 days with notification to the user.
+      </p>
+
+      <h3>E.2 Grievance Officer</h3>
+      <p>
+        In accordance with the <em>Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021</em>, Indo Pakhtoon Tech designates the Developer as the <strong>Grievance Officer</strong> for the purpose of addressing user complaints relating to data practices and Platform conduct. Grievances may be submitted via the contact email provided in Section 14 of the main Terms, with the subject line: <strong>"Formal Grievance — [Your Name]"</strong>. Grievances will be acknowledged within 24 hours and resolved within 15 days of receipt.
+      </p>
+
+      <h3>E.3 Withdrawal of Consent</h3>
+      <p>
+        Where processing of your personal data is based on your consent (for example, consent given during Google Sign-In authorization), you have the right to withdraw that consent at any time without affecting the lawfulness of processing carried out prior to withdrawal. You may withdraw consent by revoking Indo Pakhtoon Tech's access to your Google account through your Google Account's connected apps settings, and by contacting us to request deletion of any stored data.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION F — COOKIES & TRACKING TECHNOLOGIES
+    ══════════════════════════════════════════════ -->
+    <section id="sec-cookies">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">F</span>
+        <h2>Cookies & Tracking Technologies</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech's web-based Platform (website and progressive web applications) may use cookies, web storage (localStorage/sessionStorage), and similar tracking technologies to enhance user experience, analyze usage patterns, maintain session state, and support Platform functionality. This section explains how these technologies are used.
+      </p>
+
+      <h3>F.1 What Are Cookies?</h3>
+      <p>
+        Cookies are small text files placed on your device by a web server when you visit a website. They allow the website to remember your preferences and actions over a period of time, so that you do not have to re-enter information every time you visit. Cookies can be "session cookies" (which expire when you close your browser) or "persistent cookies" (which remain on your device for a set period or until deleted).
+      </p>
+
+      <h3>F.2 Categories of Cookies Used</h3>
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Cookie Category</th>
+            <th>Purpose</th>
+            <th>Can Be Disabled?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Strictly Necessary</strong></td>
+            <td>Essential for the Platform to function — session management, authentication state, CSRF protection.</td>
+            <td>No — disabling breaks core functionality</td>
+          </tr>
+          <tr>
+            <td><strong>Functional / Preference</strong></td>
+            <td>Remembers user preferences such as theme settings, language, and tool configurations.</td>
+            <td>Yes — optional, preferences reset on next visit</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics</strong></td>
+            <td>Collects anonymized data about how users interact with the Platform (page views, session duration, feature usage). Provided by Google Analytics.</td>
+            <td>Yes — opt-out available via browser settings or Google Analytics Opt-out Add-on</td>
+          </tr>
+          <tr>
+            <td><strong>Advertising</strong></td>
+            <td>Used by Google AdSense / AdMob to serve contextual advertisements on supported pages. These cookies may track browsing behavior for ad targeting.</td>
+            <td>Yes — opt-out via Google Ad Settings or browser privacy controls</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>F.3 Managing Cookies</h3>
+      <p>
+        You may control and manage cookies through your web browser settings. Most browsers allow you to view, delete, block, or clear cookies. Please note that disabling certain cookies may affect the functionality of the Platform. For guidance on managing cookies in popular browsers, refer to your browser's help documentation.
+      </p>
+
+      <h3>F.4 Do Not Track</h3>
+      <p>
+        Some browsers include a "Do Not Track" (DNT) feature that signals to websites that you do not wish to be tracked. Indo Pakhtoon Tech acknowledges DNT signals and, to the extent technically feasible and where third-party analytics tools permit, will endeavor to honor such signals. However, because there is currently no universally accepted standard for DNT compliance, we cannot guarantee that all tracking will cease upon receipt of a DNT signal.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION G — CHILDREN'S PRIVACY (DETAILED)
+    ══════════════════════════════════════════════ -->
+    <section id="sec-children">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">G</span>
+        <h2>Children's Privacy & COPPA-Aligned Protections</h2>
+      </div>
+
+      <div class="callout callout-warning">
+        <strong>⚠ Important:</strong> This section is particularly relevant for parents, guardians, and educators. Indo Pakhtoon Tech takes the protection of children's privacy with the utmost seriousness.
+      </div>
+
+      <p>
+        The Indo Pakhtoon Tech Platform and its Services are not directed toward children under the age of 13. Indo Pakhtoon Tech does not knowingly collect, solicit, or process personal data from children under the age of 13. This policy is consistent with the principles of the <em>Children's Online Privacy Protection Act (COPPA)</em> of the United States, the <em>Digital Personal Data Protection Act, 2023 (India)</em>, and other applicable child protection regulations.
+      </p>
+
+      <h3>G.1 Parental Consent for Users Between 13–18</h3>
+      <p>
+        Users between the ages of 13 and 18 (minors under Indian law) may use the Platform only with the verifiable consent of a parent or legal guardian. By registering on or using the Platform, a user in this age group represents and warrants that their parent or legal guardian has reviewed these Terms and has consented to the minor's use of the Platform. Indo Pakhtoon Tech reserves the right to require proof of parental consent at any time and to terminate accounts where such consent cannot be established.
+      </p>
+
+      <h3>G.2 Parental Rights</h3>
+      <p>
+        Parents or legal guardians who believe that their child has provided personal information to the Platform without required consent have the right to:
+      </p>
+      <ul>
+        <li>Review any personal information collected from or about their child;</li>
+        <li>Request the correction or deletion of such information;</li>
+        <li>Refuse to permit further use or collection of the child's personal information;</li>
+        <li>Contact Indo Pakhtoon Tech immediately at the support email address to exercise these rights.</li>
+      </ul>
+      <p>
+        Upon receiving a verified parental request, Indo Pakhtoon Tech will promptly delete any personal data relating to the child from its systems and terminate the associated account.
+      </p>
+
+      <h3>G.3 Age-Appropriate Applications</h3>
+      <p>
+        Certain applications within the Platform — such as basic calculator tools, educational utilities, and simple gaming resource tools — may be appropriate for use by children under appropriate parental supervision. For such applications, Indo Pakhtoon Tech endeavors to ensure that:
+      </p>
+      <ul>
+        <li>Content is age-appropriate and does not contain mature themes, violence, or adult content;</li>
+        <li>Data collection is minimized to the absolute minimum necessary for app functionality;</li>
+        <li>Advertising displayed (if any) complies with Google Play's Families Policy and child-directed advertising restrictions;</li>
+        <li>In-app purchase mechanisms, if present, include appropriate safeguards against unintended purchases by children.</li>
+      </ul>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION H — SECURITY PRACTICES
+    ══════════════════════════════════════════════ -->
+    <section id="sec-security">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">H</span>
+        <h2>Platform Security Practices</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech takes the security of the Platform and the protection of user data seriously. We implement commercially reasonable and industry-standard technical and organizational security measures designed to protect against unauthorized access, alteration, disclosure, or destruction of user data and Platform resources.
+      </p>
+
+      <h3>H.1 Technical Security Measures</h3>
+      <ul>
+        <li><strong>HTTPS Encryption:</strong> All web-based communications between users and the Platform are transmitted over HTTPS using TLS (Transport Layer Security), protecting data in transit from interception;</li>
+        <li><strong>Secure Authentication:</strong> User authentication is handled through Google OAuth 2.0, a security-hardened, industry-standard protocol. We do not store raw passwords;</li>
+        <li><strong>Data Minimization:</strong> We collect only the minimum data necessary for operational purposes, reducing the risk profile of stored data;</li>
+        <li><strong>Access Controls:</strong> Access to backend systems, databases, and sensitive configuration is restricted to authorized personnel only through role-based access controls;</li>
+        <li><strong>Dependency Security:</strong> Third-party libraries and dependencies used in Platform development are regularly reviewed and updated to address known security vulnerabilities;</li>
+        <li><strong>Android Security:</strong> Android applications are built in compliance with Android security best practices, including proper use of Android Keystore for sensitive data, avoidance of insecure data storage, and compliance with Google Play's security policies.</li>
+      </ul>
+
+      <h3>H.2 Organizational Security Measures</h3>
+      <ul>
+        <li>Regular review of security practices and policies;</li>
+        <li>Prompt response to identified security vulnerabilities through the responsible disclosure process described in Section A.2;</li>
+        <li>Maintenance of secure development practices, including code review and testing before deployment.</li>
+      </ul>
+
+      <h3>H.3 Limitation of Security Guarantees</h3>
+      <p>
+        Notwithstanding the security measures described above, no method of electronic data transmission or storage is completely secure. Indo Pakhtoon Tech cannot guarantee the absolute security of the Platform against all possible threats, including sophisticated cyberattacks, zero-day exploits, or actions of malicious insiders. In the event of a security breach affecting user data, Indo Pakhtoon Tech will take prompt remedial action and notify affected users as required by applicable law.
+      </p>
+
+      <div class="callout callout-info">
+        <strong>ℹ Data Breach Notification:</strong> In the event of a personal data breach that is likely to result in a risk to the rights and freedoms of users, Indo Pakhtoon Tech will notify affected users and relevant authorities (where required by the DPDPA 2023 or other applicable law) without undue delay, and in any event within the timeframes prescribed by applicable legislation.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION I — PLATFORM AVAILABILITY & MAINTENANCE
+    ══════════════════════════════════════════════ -->
+    <section id="sec-availability">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">I</span>
+        <h2>Platform Availability, Downtime & Maintenance</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech strives to maintain high availability and reliable performance of all Platform Services. However, as an independently operated platform, there are inherent limitations on the level of infrastructure redundancy and availability guarantees that can be provided.
+      </p>
+
+      <h3>I.1 No Uptime Guarantee</h3>
+      <p>
+        Indo Pakhtoon Tech does not provide any Service Level Agreement (SLA) or guarantee any specific level of uptime, availability, or response time. The Platform is provided on a best-efforts basis. Services may be unavailable from time to time due to:
+      </p>
+      <ul>
+        <li>Scheduled maintenance windows (advance notice will be provided where practicable);</li>
+        <li>Emergency maintenance to address critical security vulnerabilities or system failures;</li>
+        <li>Third-party infrastructure outages (hosting providers, CDN, database services);</li>
+        <li>Force majeure events beyond the Developer's reasonable control;</li>
+        <li>Internet service provider disruptions or network-level issues outside the Platform's control.</li>
+      </ul>
+
+      <h3>I.2 Planned Maintenance</h3>
+      <p>
+        Where planned maintenance is expected to cause significant disruption (generally defined as more than 30 minutes of downtime), Indo Pakhtoon Tech will endeavor to provide advance notice of at least 24 hours through Platform notices, in-app messages, or social media announcements where applicable. Emergency maintenance may be performed without advance notice where necessary to preserve Platform security or integrity.
+      </p>
+
+      <h3>I.3 Service Discontinuation</h3>
+      <p>
+        Indo Pakhtoon Tech reserves the right to permanently discontinue any feature, tool, application, or the Platform as a whole at any time. In the event of a significant service discontinuation affecting paid users or users with stored data, Indo Pakhtoon Tech will provide reasonable advance notice (generally a minimum of 30 days where practicable) and will facilitate the export or migration of user data where technically feasible. No refunds or compensation will be owed for permanent service discontinuation, given the voluntary, non-contractual nature of the donation model.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION J — FEEDBACK & SUGGESTIONS
+    ══════════════════════════════════════════════ -->
+    <section id="sec-feedback">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">J</span>
+        <h2>Feedback, Suggestions & User Contributions</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech welcomes feedback, suggestions, feature requests, and ideas from its user community. If you choose to provide feedback, suggestions, or ideas about the Platform or its Services (collectively, "Feedback"), you acknowledge and agree to the following:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Ownership of Feedback:</strong> You hereby grant Indo Pakhtoon Tech a worldwide, perpetual, irrevocable, royalty-free, fully transferable, sublicensable license to use, reproduce, modify, adapt, publish, translate, distribute, and otherwise exploit your Feedback in any form, medium, or technology, without any obligation of compensation, attribution, confidentiality, or approval from you;
+        </li>
+        <li>
+          <strong>No Confidentiality:</strong> Feedback submitted to Indo Pakhtoon Tech is not treated as confidential information. Do not submit Feedback that contains confidential, proprietary, or sensitive information that you do not wish to be freely used by Indo Pakhtoon Tech;
+        </li>
+        <li>
+          <strong>No Obligation to Implement:</strong> Indo Pakhtoon Tech is under no obligation to implement, respond to, or acknowledge any Feedback submitted by users, regardless of its nature or quality;
+        </li>
+        <li>
+          <strong>Originality:</strong> You represent that all Feedback you provide is original to you and does not infringe any third-party intellectual property rights.
+        </li>
+      </ul>
+
+      <div class="callout callout-success">
+        <strong>✅ We Value Your Input:</strong> While the above legal provisions are necessary, please know that Indo Pakhtoon Tech genuinely values user feedback and uses it to guide feature development and Platform improvements. Your suggestions help make the Platform better for everyone.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION K — EXPORT CONTROL & COMPLIANCE
+    ══════════════════════════════════════════════ -->
+    <section id="sec-export">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">K</span>
+        <h2>Export Control & Regulatory Compliance</h2>
+      </div>
+
+      <p>
+        The Indo Pakhtoon Tech Platform and its applications are developed and distributed from the Republic of India and are subject to applicable Indian export control regulations. Users are solely responsible for ensuring that their access to and use of the Platform complies with all applicable export control laws, sanctions regulations, and import/export restrictions in their respective jurisdictions.
+      </p>
+
+      <p>
+        By using the Platform, you represent and warrant that:
+      </p>
+      <ul>
+        <li>You are not located in a country that is subject to a government embargo or that has been designated as a "terrorist-supporting" country by any applicable government authority;</li>
+        <li>You are not listed on any government list of prohibited or restricted parties;</li>
+        <li>You will not access or use the Platform in violation of any applicable export control law or trade sanctions regime.</li>
+      </ul>
+
+      <p>
+        Indo Pakhtoon Tech reserves the right to restrict access to the Platform from certain geographic regions to comply with applicable laws and regulations, without prior notice and without liability.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION L — COMPLETE ACKNOWLEDGEMENT & SUMMARY
+    ══════════════════════════════════════════════ -->
+    <section id="sec-acknowledgement">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">L</span>
+        <h2>Complete User Acknowledgement & Summary of Key Provisions</h2>
+      </div>
+
+      <p>
+        Before concluding this Terms and Conditions document, Indo Pakhtoon Tech wishes to summarize the most critical provisions that every user should be fully aware of. Your use of the Platform constitutes your agreement to all of the following:
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          <strong>1. Voluntary Donations:</strong> Any financial contribution you make to Indo Pakhtoon Tech is entirely voluntary. We will never deceive or pressure you into making a payment. If you made an accidental payment, contact us — we will refund it honestly and promptly.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>2. Intellectual Property:</strong> All content, code, logos, and designs on the Platform belong to Indo Pakhtoon Tech. You may not copy, reverse engineer, or commercially exploit any part of the Platform without written permission.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>3. Google Sign-In Data:</strong> We use your Google account data minimally and responsibly — only your name, email, and profile picture for account functionality. We do not sell your data to anyone.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>4. Your Rights:</strong> You have the right to access, correct, delete, and port your personal data. Contact us at any time to exercise these rights.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>5. Calculator & Tool Results:</strong> Results from our digital tools are for informational purposes only. Do not make important decisions based solely on automated calculations without consulting a qualified professional.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>6. Governing Law:</strong> Any disputes will be resolved under Indian law, specifically under the jurisdiction of the courts of Uttar Pradesh, India, or through binding arbitration as described in these Terms.
+        </p>
+      </div>
+
+      <div class="highlight-box">
+        <p>
+          <strong>7. No Warranty:</strong> The Platform is provided "as is" without warranties of any kind. Indo Pakhtoon Tech's liability to you is strictly limited as described in the Limitation of Liability section.
+        </p>
+      </div>
+
+      <p style="margin-top: 20px;">
+        If you have any questions, concerns, or require clarification on any aspect of these Terms or the supplementary provisions contained herein, we strongly encourage you to contact the Indo Pakhtoon Tech support team before using the Platform. We are committed to transparency and are happy to explain any provision in plain language.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <span class="footer-brand">Indo Pakhtoon Tech</span>
+
+    <p>
+      An independently operated technology ecosystem — Uttar Pradesh, India.<br />
+      Building ethical, user-first digital tools with transparency and integrity at our core.
+    </p>
+
+    <p style="margin-top: 12px; font-size: 0.86rem;">
+      <strong>Support Email:</strong>
+      <a href="mailto:support@indopakhtoontech.com" style="color: var(--accent-light); text-decoration: none;">
+        support@indopakhtoontech.com
+      </a>
+       | 
+      <strong>Legal Queries:</strong>
+      <a href="mailto:legal@indopakhtoontech.com" style="color: var(--accent-light); text-decoration: none;">
+        legal@indopakhtoontech.com
+      </a>
+    </p>
+
+    <div class="footer-divider"></div>
+
+    <p style="font-size:0.84rem; color: rgba(255,255,255,0.60); max-width: 760px; margin: 0 auto;">
+      This document, together with its principal Terms and Conditions document and the Indo Pakhtoon Tech Privacy Policy, constitutes the complete, definitive, and legally binding agreement between you and Indo Pakhtoon Tech governing your use of the Platform. These supplementary provisions are an inseparable extension of, and must be read in conjunction with, the principal Terms document. Indo Pakhtoon Tech reserves all rights not expressly granted herein.
+    </p>
+
+    <div class="footer-seal">
+      © 2025 Indo Pakhtoon Tech  •  All Rights Reserved  •  Uttar Pradesh, India  •  Version 1.0
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        The provisions of these Terms survive the termination of your account or your cessation of use of the Platform to the extent necessary to give effect to the rights and obligations described herein. If you have reviewed this document in full and have any outstanding questions, we welcome you to contact our team — we are committed to being a platform you can trust, and we look forward to continuing to serve you through our ever-growing suite of digital Services.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+<!-- ══════════════════════════════════════════════
+         SECTION M — COMMUNICATIONS & NOTIFICATIONS POLICY
+    ══════════════════════════════════════════════ -->
+    <section id="sec-communications">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">M</span>
+        <h2>Communications, Notifications & Electronic Records Policy</h2>
+      </div>
+
+      <p>
+        By creating an account on the Indo Pakhtoon Tech Platform or by voluntarily providing your email address through any form, feedback mechanism, donation process, or support inquiry, you consent to receive electronic communications from Indo Pakhtoon Tech. This section governs the nature, frequency, and management of such communications.
+      </p>
+
+      <h3>M.1 Types of Communications</h3>
+      <p>
+        Indo Pakhtoon Tech may send you the following categories of electronic communications:
+      </p>
+
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Communication Type</th>
+            <th>Description</th>
+            <th>Opt-Out Available?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Transactional</strong></td>
+            <td>Donation confirmations, refund notifications, account creation confirmations, and support ticket responses.</td>
+            <td>No — essential for account and transaction management</td>
+          </tr>
+          <tr>
+            <td><strong>Security Alerts</strong></td>
+            <td>Notifications of suspicious activity, unauthorized access attempts, or important changes to account security settings.</td>
+            <td>No — critical for user safety</td>
+          </tr>
+          <tr>
+            <td><strong>Legal & Policy Updates</strong></td>
+            <td>Notifications of material changes to these Terms, Privacy Policy, or other governing documents.</td>
+            <td>No — required for legal compliance</td>
+          </tr>
+          <tr>
+            <td><strong>Service Updates</strong></td>
+            <td>Announcements of new features, application updates, maintenance windows, or significant Platform changes.</td>
+            <td>Yes — unsubscribe via email link or account settings</td>
+          </tr>
+          <tr>
+            <td><strong>Promotional</strong></td>
+            <td>Optional newsletters, feature spotlights, or community updates (only where explicitly opted in).</td>
+            <td>Yes — unsubscribe at any time via email footer link</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>M.2 Electronic Records & Consent</h3>
+      <p>
+        In accordance with the <em>Information Technology Act, 2000</em> and the <em>Indian Evidence Act, 1872</em> (as amended), you agree that:
+      </p>
+      <ul>
+        <li>Electronic records, communications, and agreements relating to your use of the Platform are valid and enforceable to the same extent as paper-based records;</li>
+        <li>Your click-through acceptance of these Terms constitutes a valid electronic signature under applicable Indian law;</li>
+        <li>Indo Pakhtoon Tech may maintain and produce electronic records as evidence in any legal, regulatory, or administrative proceeding;</li>
+        <li>You consent to receiving legally required notices, disclosures, and communications electronically rather than in paper form.</li>
+      </ul>
+
+      <h3>M.3 In-App Notifications</h3>
+      <p>
+        Android applications published by Indo Pakhtoon Tech may request permission to send push notifications to your device. Push notifications may include information about app updates, maintenance events, new tool releases, or important account-related information. You may enable or disable push notifications at any time through your device's notification settings without affecting your ability to use the application's core features.
+      </p>
+
+      <h3>M.4 Anti-Spam Commitment</h3>
+      <p>
+        Indo Pakhtoon Tech is firmly committed to responsible email practices. We will never:
+      </p>
+      <ul>
+        <li>Send unsolicited bulk commercial emails (spam) to users who have not consented to receive them;</li>
+        <li>Share, sell, or rent user email addresses to third-party marketers or advertisers;</li>
+        <li>Use deceptive subject lines or sender information in any email communication;</li>
+        <li>Send emails at an unreasonable frequency that could constitute harassment or nuisance.</li>
+      </ul>
+
+      <div class="callout callout-success">
+        <strong>✅ Unsubscribe Guarantee:</strong> Every marketing or service update email sent by Indo Pakhtoon Tech will include a clear, functional, one-click unsubscribe link at the bottom of the message. Unsubscribe requests will be honored within <strong>10 business days</strong> in accordance with applicable anti-spam regulations.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION N — DIGITAL PERSONAL DATA PROTECTION ACT 2023
+    ══════════════════════════════════════════════ -->
+    <section id="sec-dpdpa">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">N</span>
+        <h2>Compliance with the Digital Personal Data Protection Act, 2023 (DPDPA)</h2>
+      </div>
+
+      <p>
+        The <em>Digital Personal Data Protection Act, 2023 (DPDPA)</em> represents a landmark development in Indian data protection law. Indo Pakhtoon Tech is committed to proactive compliance with the DPDPA and its implementing rules as they come into force. This section outlines our specific commitments under the DPDPA framework.
+      </p>
+
+      <h3>N.1 Role as Data Fiduciary</h3>
+      <p>
+        Under the DPDPA, Indo Pakhtoon Tech operates as a <strong>Data Fiduciary</strong> with respect to the personal data of its users, as it determines the purpose and means of processing such data. As a Data Fiduciary, Indo Pakhtoon Tech acknowledges the following core obligations:
+      </p>
+      <ul>
+        <li><strong>Lawful Processing:</strong> Personal data will be processed only for lawful purposes with a valid legal basis, including user consent, performance of a contract, compliance with legal obligations, or other grounds recognized under the DPDPA;</li>
+        <li><strong>Purpose Limitation:</strong> Data collected for a specific purpose will not be used for any incompatible secondary purpose without fresh consent;</li>
+        <li><strong>Data Minimization:</strong> Only data that is adequate, relevant, and limited to what is necessary for the stated purpose will be collected and processed;</li>
+        <li><strong>Accuracy:</strong> Reasonable steps will be taken to ensure that personal data is accurate and up to date, particularly where data is used to make decisions affecting users;</li>
+        <li><strong>Storage Limitation:</strong> Personal data will not be retained for longer than is necessary for the purpose for which it was collected, subject to any applicable legal retention obligations;</li>
+        <li><strong>Security:</strong> Appropriate technical and organizational measures will be implemented to protect personal data against unauthorized processing, accidental loss, destruction, or damage.</li>
+      </ul>
+
+      <h3>N.2 Consent Management</h3>
+      <p>
+        Where consent is the legal basis for processing personal data under the DPDPA, Indo Pakhtoon Tech will ensure that:
+      </p>
+      <ul>
+        <li>Consent is obtained through a clear, affirmative action by the user — no pre-ticked boxes or implied consent mechanisms will be used;</li>
+        <li>The consent request is presented in plain, intelligible language, specifying the exact personal data to be processed and the purposes thereof;</li>
+        <li>Consent is not bundled as a condition for accessing the Platform's core utility features (where technically separable);</li>
+        <li>Records of consent are maintained for accountability purposes;</li>
+        <li>Users can withdraw their consent at any time through the mechanisms described in Section E.3 of this document.</li>
+      </ul>
+
+      <h3>N.3 Data Principal Rights Under DPDPA</h3>
+      <p>
+        In addition to the general user rights described in Section E, the DPDPA specifically recognizes the following rights for Data Principals (users), which Indo Pakhtoon Tech is committed to upholding:
+      </p>
+      <ul>
+        <li><strong>Right to Information:</strong> The right to obtain a summary of personal data being processed and the identities of all Data Processors with whom data has been shared;</li>
+        <li><strong>Right to Correction and Erasure:</strong> The right to correct inaccurate or misleading personal data and to erase data where it is no longer necessary for the purpose it was collected;</li>
+        <li><strong>Right of Grievance Redressal:</strong> The right to have grievances addressed by the Data Fiduciary within a prescribed timeframe, and to escalate to the Data Protection Board of India if unsatisfied;</li>
+        <li><strong>Right to Nominate:</strong> The right to nominate another individual who may exercise data principal rights on behalf of the user in the event of death or incapacity.</li>
+      </ul>
+
+      <h3>N.4 Cross-Border Data Transfers</h3>
+      <p>
+        Certain third-party services integrated into the Platform (such as Google Analytics, Firebase, and AdMob) may involve the transfer of user data to servers located outside India. Indo Pakhtoon Tech will ensure that any such cross-border data transfers comply with the applicable provisions of the DPDPA and any rules or whitelist notifications issued by the Government of India regarding permissible countries for data transfer. Users will be informed of any significant cross-border data transfer arrangements through the Privacy Policy.
+      </p>
+
+      <div class="callout callout-info">
+        <strong>ℹ DPDPA Implementation Timeline:</strong> The DPDPA 2023 is being implemented in phases. Indo Pakhtoon Tech is actively monitoring the issuance of implementing rules and notifications by the Government of India and will update its compliance practices accordingly as each provision comes into force.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION O — CONSUMER PROTECTION ACT 2019
+    ══════════════════════════════════════════════ -->
+    <section id="sec-consumer">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">O</span>
+        <h2>Consumer Rights & Compliance with the Consumer Protection Act, 2019</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech acknowledges and respects the rights of consumers as enshrined in the <em>Consumer Protection Act, 2019</em> (India) and the <em>Consumer Protection (E-Commerce) Rules, 2020</em>. As a provider of digital services accessible to Indian consumers, the following provisions reflect our commitment to fair and transparent consumer practices.
+      </p>
+
+      <h3>O.1 Right to Fair Treatment</h3>
+      <p>
+        Every user of the Platform has the right to fair, honest, and non-discriminatory treatment. Indo Pakhtoon Tech commits to the following consumer-centric principles:
+      </p>
+      <ul>
+        <li>No use of dark patterns, deceptive design, or manipulative user interface techniques to mislead users into unintended actions, including accidental payments or unwanted subscriptions;</li>
+        <li>Clear, accurate, and complete disclosure of all features, limitations, pricing (where applicable), and material terms before a user commits to any transaction;</li>
+        <li>No false representation of the Platform's capabilities, affiliations, awards, or endorsements;</li>
+        <li>Prompt and effective redressal of consumer complaints through the grievance mechanism described in these Terms.</li>
+      </ul>
+
+      <h3>O.2 E-Commerce Disclosure Requirements</h3>
+      <p>
+        In compliance with the Consumer Protection (E-Commerce) Rules, 2020, Indo Pakhtoon Tech discloses the following information prominently on the Platform:
+      </p>
+      <ul>
+        <li><strong>Legal Name:</strong> Indo Pakhtoon Tech (Individual / Independent Developer)</li>
+        <li><strong>Geographic Address:</strong> Uttar Pradesh, India</li>
+        <li><strong>Contact Details:</strong> As provided in Section 14 of the principal Terms document</li>
+        <li><strong>Grievance Officer:</strong> The Developer, contactable via the designated support email</li>
+        <li><strong>Payment Security:</strong> All donation transactions are processed through regulated UPI infrastructure governed by NPCI guidelines</li>
+      </ul>
+
+      <h3>O.3 Unfair Trade Practices — Zero Tolerance</h3>
+      <p>
+        Indo Pakhtoon Tech expressly prohibits and will not engage in any unfair trade practice as defined under the Consumer Protection Act, 2019, including but not limited to:
+      </p>
+      <ul>
+        <li>Making false or misleading representations about the nature, quality, or standard of Services;</li>
+        <li>Offering any prize, gift, or reward with the intention of not providing it or providing a materially inferior alternative;</li>
+        <li>Conducting any contest, lottery, or promotional scheme that is not genuinely offered as represented;</li>
+        <li>Withholding information that would be material to a consumer's decision to use the Platform or make a contribution;</li>
+        <li>Engaging in any form of bait advertising or price manipulation.</li>
+      </ul>
+
+      <h3>O.4 Consumer Dispute Resolution</h3>
+      <p>
+        Users who have a consumer dispute with Indo Pakhtoon Tech that cannot be resolved through the informal grievance process described herein may escalate their complaint to the appropriate Consumer Disputes Redressal Commission (District, State, or National, depending on the value of the dispute) in accordance with the Consumer Protection Act, 2019. Indo Pakhtoon Tech will cooperate fully with any consumer commission proceedings and will provide all required documentation and information in a timely manner.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION P — SOCIAL MEDIA & BRAND REPRESENTATION
+    ══════════════════════════════════════════════ -->
+    <section id="sec-social">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">P</span>
+        <h2>Social Media, Brand Representation & Fan Content Policy</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech may maintain an official presence on various social media platforms, including but not limited to YouTube, Instagram, Twitter/X, LinkedIn, and others. This section governs the relationship between the Platform and social media activities connected to the Indo Pakhtoon Tech brand.
+      </p>
+
+      <h3>P.1 Official Social Media Channels</h3>
+      <p>
+        Only those social media accounts explicitly identified as official on the Indo Pakhtoon Tech website or within Platform applications should be considered as representing the views, announcements, and official communications of Indo Pakhtoon Tech. The Developer is not responsible for content published by unofficial, fan-created, or impersonating accounts claiming to represent Indo Pakhtoon Tech on any social platform.
+      </p>
+
+      <p>
+        Users who encounter accounts that fraudulently impersonate Indo Pakhtoon Tech on social media are encouraged to report such accounts to the relevant platform and notify Indo Pakhtoon Tech at the support email address provided in these Terms.
+      </p>
+
+      <h3>P.2 Fan Content & Community Creations</h3>
+      <p>
+        Indo Pakhtoon Tech appreciates genuine community enthusiasm and fan-created content related to the Platform and its applications. Individuals who create non-commercial fan content (such as review videos, tutorial guides, fan art, or community discussions) related to Indo Pakhtoon Tech applications may do so subject to the following guidelines:
+      </p>
+      <ul>
+        <li>Fan content must clearly identify itself as unofficial and not affiliated with or endorsed by Indo Pakhtoon Tech;</li>
+        <li>Fan content must not use the Indo Pakhtoon Tech logo, official brand marks, or app icons in a manner that implies official affiliation or endorsement;</li>
+        <li>Fan content must be accurate and must not misrepresent the features, pricing, or capabilities of any Indo Pakhtoon Tech application;</li>
+        <li>Fan content must not be used for commercial monetization in a manner that exploits the Indo Pakhtoon Tech brand without written authorization;</li>
+        <li>Indo Pakhtoon Tech reserves the right to request the modification or removal of fan content that violates these guidelines or that could damage the Platform's reputation.</li>
+      </ul>
+
+      <h3>P.3 Prohibited Brand Misuse</h3>
+      <p>
+        The following specific uses of the Indo Pakhtoon Tech brand, name, or assets on social media or elsewhere are strictly prohibited without prior written authorization:
+      </p>
+      <ul>
+        <li>Creating fake or impersonating social media accounts in the name of Indo Pakhtoon Tech;</li>
+        <li>Using the Indo Pakhtoon Tech brand to solicit donations, payments, or personal information from other users;</li>
+        <li>Falsely claiming a partnership, collaboration, or endorsement relationship with Indo Pakhtoon Tech;</li>
+        <li>Using the brand name or logos in domain names, app titles, or store listings that could create consumer confusion;</li>
+        <li>Publishing defamatory, false, or malicious content about Indo Pakhtoon Tech or its Developer under the guise of commentary or review.</li>
+      </ul>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION Q — MONETIZATION & ADVERTISING ETHICS
+    ══════════════════════════════════════════════ -->
+    <section id="sec-monetization">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">Q</span>
+        <h2>Monetization Ethics & Advertising Standards</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech is committed to ethical, transparent, and user-respecting monetization practices. As an independent developer, sustainable revenue is necessary to fund ongoing Platform development, server infrastructure, and application maintenance. This section explains our approach to monetization and the standards we hold ourselves to.
+      </p>
+
+      <h3>Q.1 Our Monetization Philosophy</h3>
+      <p>
+        Indo Pakhtoon Tech believes that a Platform's financial sustainability and its users' trust are not mutually exclusive. Our monetization approach is guided by the following principles:
+      </p>
+
+      <div class="rights-grid">
+        <div class="rights-card">
+          <span class="rights-icon">🎯</span>
+          <h4>Transparency First</h4>
+          <p>We clearly disclose all monetization mechanisms — ads, donations, and in-app purchases — without hiding them in fine print.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">🚫</span>
+          <h4>No Dark Patterns</h4>
+          <p>We never use deceptive UI elements, fake urgency timers, or disguised purchase buttons to trick users into spending.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">🎁</span>
+          <h4>Free Core Features</h4>
+          <p>Core utility features remain accessible free of charge. Monetization is applied to optional enhancements only.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">🛡️</span>
+          <h4>Ad Safety</h4>
+          <p>Ads displayed are subject to Google AdMob's content policies — no malicious, adult, or deceptive advertisements.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">♻️</span>
+          <h4>Revenue Reinvestment</h4>
+          <p>Revenue generated supports Platform development, hosting costs, and the improvement of free tools for all users.</p>
+        </div>
+        <div class="rights-card">
+          <span class="rights-icon">❤️</span>
+          <h4>Voluntary Support</h4>
+          <p>Donations are genuinely voluntary. We are grateful for any support but will never guilt-trip users into contributing.</p>
+        </div>
+      </div>
+
+      <h3>Q.2 In-App Purchase Standards</h3>
+      <p>
+        Where in-app purchases are offered within Indo Pakhtoon Tech Android applications, the following standards will always be observed:
+      </p>
+      <ul>
+        <li>The price of every in-app purchase item will be clearly and prominently displayed before the user commits to the purchase;</li>
+        <li>No in-app purchase will be presented in a manner designed to confuse users about what they are purchasing or how much they are spending;</li>
+        <li>In-app purchases that unlock permanent features will clearly state that the feature is permanently unlocked for the purchasing account;</li>
+        <li>Consumable in-app purchases (such as one-time resource packs) will clearly indicate their consumable nature;</li>
+        <li>Child-directed apps will not contain in-app purchases or will require parental authentication before any purchase can be completed, in accordance with Google Play Families Policy.</li>
+      </ul>
+
+      <h3>Q.3 Sponsored Content Disclosure</h3>
+      <p>
+        If Indo Pakhtoon Tech ever publishes sponsored content, paid partnerships, or affiliate-linked content on the Platform or its associated social media channels, such content will be clearly and conspicuously labeled as "Sponsored," "Paid Partnership," or "Advertisement" in compliance with applicable advertising disclosure guidelines and the Advertising Standards Council of India (ASCI) Code.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION R — ACCESSIBILITY COMMITMENT
+    ══════════════════════════════════════════════ -->
+    <section id="sec-accessibility">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">R</span>
+        <h2>Accessibility Commitment</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech is committed to making its Platform and applications accessible to the widest possible audience, including individuals with disabilities. We strive to follow internationally recognized accessibility standards, including the <strong>Web Content Accessibility Guidelines (WCAG) 2.1</strong> at Level AA, to the extent technically feasible for an independently operated platform.
+      </p>
+
+      <h3>R.1 Accessibility Features We Aim to Support</h3>
+      <ul>
+        <li><strong>Screen Reader Compatibility:</strong> Web content and application interfaces are designed with appropriate semantic HTML, ARIA labels, and alt text to support screen readers such as NVDA, JAWS, and Android's TalkBack;</li>
+        <li><strong>Keyboard Navigation:</strong> Web-based tools and interfaces are designed to be navigable by keyboard alone, without requiring mouse or touch input;</li>
+        <li><strong>Color Contrast:</strong> Text and interactive elements are designed with sufficient color contrast ratios to support users with low vision or color vision deficiencies;</li>
+        <li><strong>Scalable Text:</strong> Text sizes are specified in relative units (rem/em) to support browser and OS-level text scaling settings;</li>
+        <li><strong>Touch Target Sizes:</strong> Interactive elements in Android applications are designed with sufficient touch target sizes to support users with motor impairments.</li>
+      </ul>
+
+      <h3>R.2 Accessibility Feedback</h3>
+      <p>
+        If you experience any accessibility barriers while using the Platform or its applications, Indo Pakhtoon Tech genuinely wants to know. Please contact our support team with a description of the barrier, the specific page or feature affected, the assistive technology or browser you are using, and your device and operating system. We will investigate all accessibility reports and strive to implement reasonable improvements as resources permit.
+      </p>
+
+      <div class="callout callout-info">
+        <strong>ℹ Ongoing Improvement:</strong> Accessibility is an ongoing commitment rather than a one-time implementation. Indo Pakhtoon Tech will continue to review and improve the accessibility of its Platform and applications with each update cycle, with the goal of ensuring that our digital tools are usable by as many people as possible.
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION S — LANGUAGE, LOCALIZATION & REGIONAL NOTES
+    ══════════════════════════════════════════════ -->
+    <section id="sec-localization">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">S</span>
+        <h2>Language, Localization & Regional Considerations</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech is an Indian platform with a global digital footprint. This section addresses language, localization, and regional considerations relevant to users across different geographies.
+      </p>
+
+      <h3>S.1 English as the Governing Language</h3>
+      <p>
+        These Terms, the Privacy Policy, and all other legal documents governing the Platform are drafted in the <strong>English language</strong>. In the event that any translation of these Terms is made available in Hindi, Urdu, Pashto, or any other language for the convenience of regional users, the English version shall be the authoritative, controlling version for all legal purposes. Any discrepancy, ambiguity, or inconsistency between a translated version and the English version shall be resolved in favor of the English version.
+      </p>
+
+      <h3>S.2 Application Localization</h3>
+      <p>
+        Individual applications within the Indo Pakhtoon Tech ecosystem may be available in multiple languages, including but not limited to English, Hindi, and Urdu, depending on the specific application's design and target audience. Localization of application content (such as labels, instructions, and output formatting) is provided as a convenience feature and does not alter the legal terms governing use of the application. All localized content is subject to the same Terms and Conditions as the English-language version.
+      </p>
+
+      <h3>S.3 Currency & Regional Payment Notes</h3>
+      <p>
+        All financial matters relating to the Platform — including donation amounts, refund values, and any in-app purchase pricing — are denominated in <strong>Indian Rupees (INR)</strong> unless explicitly stated otherwise in a specific transaction interface. Users accessing the Platform from outside India should note that currency conversion, international transaction fees, and any applicable foreign exchange regulations are the sole responsibility of the user and their financial institution. Indo Pakhtoon Tech does not bear any liability for costs arising from currency conversion or cross-border payment processing.
+      </p>
+
+      <h3>S.4 International Users — Compliance Responsibility</h3>
+      <p>
+        While the Platform is accessible from many countries, it is operated and governed exclusively under Indian law. International users access the Platform at their own initiative and are solely responsible for ensuring that such access and use complies with all laws applicable in their country of residence or access, including any restrictions on use of foreign digital services, data protection obligations, or consumer protection requirements applicable in their jurisdiction.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION T — PLATFORM EVOLUTION & FUTURE FEATURES
+    ══════════════════════════════════════════════ -->
+    <section id="sec-evolution">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#2a5f8f;">T</span>
+        <h2>Platform Evolution, Future Features & No Commitment to Continuity</h2>
+      </div>
+
+      <p>
+        Indo Pakhtoon Tech is a living, evolving platform. The Developer actively works on expanding the ecosystem with new tools, applications, and features. This section clarifies the nature of such evolution and its implications for users.
+      </p>
+
+      <h3>T.1 No Commitment to Future Development</h3>
+      <p>
+        While Indo Pakhtoon Tech aspires to continuously improve and expand the Platform, it makes no binding commitment, representation, or warranty regarding:
+      </p>
+      <ul>
+        <li>The development or release of any particular feature, tool, or application;</li>
+        <li>The timeline for any planned or announced release;</li>
+        <li>The continued availability of any currently offered feature, tool, or application;</li>
+        <li>The compatibility of future application versions with older device hardware or software versions.</li>
+      </ul>
+      <p>
+        Any statements about planned features, roadmap items, or future releases made by Indo Pakhtoon Tech through any channel (including social media, blog posts, or in-app messages) are expressions of intent only and do not constitute legally binding commitments or warranties.
+      </p>
+
+      <h3>T.2 Feature Deprecation Policy</h3>
+      <p>
+        When Indo Pakhtoon Tech decides to deprecate or remove an existing feature that is actively used by a significant portion of its user base, it will endeavor to:
+      </p>
+      <ul>
+        <li>Provide advance notice of at least <strong>30 days</strong> prior to removal through Platform notices or in-app messages;</li>
+        <li>Where technically feasible, provide users with the ability to export or preserve any personal data associated with the deprecated feature before its removal;</li>
+        <li>Document significant feature changes in app release notes published on the Google Play Store and, where applicable, on the Platform website.</li>
+      </ul>
+
+      <h3>T.3 Beta and Experimental Features</h3>
+      <p>
+        The Platform may from time to time offer experimental or beta features that are clearly labeled as such. These experimental features are provided without warranty of any kind, may be unstable, and may be discontinued at any time without notice. Users who choose to use experimental features do so entirely at their own risk and should not rely upon such features for critical or time-sensitive purposes.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         SECTION U — FINAL LEGAL DECLARATIONS
+    ══════════════════════════════════════════════ -->
+    <section id="sec-final-declarations">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#1a3c5e;">U</span>
+        <h2>Final Legal Declarations & Closing Provisions</h2>
+      </div>
+
+      <p>
+        This section contains the final formal legal declarations that complete the Terms and Conditions of Indo Pakhtoon Tech. These declarations summarize certain overarching legal principles that govern the entire Agreement and should be read carefully.
+      </p>
+
+      <h3>U.1 Entire Agreement Declaration</h3>
+      <p>
+        This Terms and Conditions document — comprising both the principal Terms document and all supplementary provisions contained in this continuation — together with the Indo Pakhtoon Tech Privacy Policy, Cookie Policy, and any application-specific terms expressly incorporated by reference, constitutes the <strong>entire and exclusive agreement</strong> between you and Indo Pakhtoon Tech with respect to your use of the Platform and Services. This Agreement supersedes and replaces all prior understandings, negotiations, representations, warranties, and agreements — whether oral, written, or electronic — between the parties concerning its subject matter.
+      </p>
+
+      <h3>U.2 No Implied Terms</h3>
+      <p>
+        To the fullest extent permitted by applicable law, no terms, conditions, warranties, or representations shall be implied into this Agreement by statute, common law, custom, trade usage, or otherwise, except those that are incapable of exclusion under mandatory provisions of Indian law. Nothing in this Agreement excludes or limits any statutory rights that cannot be waived or excluded under applicable consumer protection or data protection law.
+      </p>
+
+      <h3>U.3 Relationship of the Parties</h3>
+      <p>
+        Nothing in these Terms shall be construed to create any agency, partnership, joint venture, employment, franchise, or fiduciary relationship between you and Indo Pakhtoon Tech. You are an independent user of the Platform. Neither party has the authority to bind the other in any respect, nor incur obligations on behalf of the other.
+      </p>
+
+      <h3>U.4 Notices</h3>
+      <p>
+        All formal legal notices to Indo Pakhtoon Tech under or in connection with these Terms must be delivered in writing via email to the designated legal queries email address provided in Section 14 of the principal Terms document, with the subject line clearly identifying the nature of the notice (e.g., "Formal Legal Notice — [Matter]"). Notices will be deemed received upon confirmation of email delivery. Indo Pakhtoon Tech may send legal notices to you at the email address associated with your registered account.
+      </p>
+
+      <h3>U.5 Interpretation Principles</h3>
+      <p>
+        In interpreting these Terms, the following principles shall apply:
+      </p>
+      <ul>
+        <li>The word "including" and similar expressions shall be construed as "including without limitation" and shall not limit the generality of any preceding words;</li>
+        <li>References to a statute or statutory provision shall include all subsequent amendments, replacements, or re-enactments thereof;</li>
+        <li>Singular references include the plural and vice versa, and references to one gender include all genders;</li>
+        <li>These Terms shall not be construed more strictly against the party that drafted them (contra proferentem) — both parties are assumed to have had equal opportunity to review these Terms.</li>
+      </ul>
+
+      <h3>U.6 Survival of Provisions</h3>
+      <p>
+        The following sections of these Terms shall survive the termination or expiration of this Agreement and shall continue to bind both parties indefinitely after such termination:
+      </p>
+      <ul>
+        <li>Section 3 — Intellectual Property Rights;</li>
+        <li>Section 9 — Disclaimer of Warranties;</li>
+        <li>Section 10 — Limitation of Liability;</li>
+        <li>Section 11 — Indemnification;</li>
+        <li>Section 12 — Governing Law & Dispute Resolution;</li>
+        <li>Section U.1 — Entire Agreement Declaration;</li>
+        <li>All provisions that by their nature are intended to survive termination.</li>
+      </ul>
+
+      <h3>U.7 Force Majeure — Extended Provision</h3>
+      <p>
+        Neither party shall be liable for any failure or delay in the performance of its obligations under these Terms to the extent that such failure or delay is caused by a Force Majeure Event. A <strong>Force Majeure Event</strong> means any event beyond the reasonable control of the affected party, including but not limited to:
+      </p>
+      <ul>
+        <li>Acts of God, including earthquakes, floods, storms, hurricanes, and other natural disasters;</li>
+        <li>War, terrorism, armed conflict, civil unrest, riots, or governmental actions;</li>
+        <li>Pandemic, epidemic, or widespread public health emergency;</li>
+        <li>Nationwide or widespread internet infrastructure failures or significant cyberattacks targeting foundational internet services;</li>
+        <li>Actions of governmental or regulatory authorities, including new legislation that materially affects the ability to provide the Services;</li>
+        <li>Extended outages of critical third-party infrastructure providers (such as cloud hosting providers or domain registrars) that are outside Indo Pakhtoon Tech's control.</li>
+      </ul>
+      <p>
+        The affected party shall notify the other party of a Force Majeure Event as soon as reasonably practicable and shall use commercially reasonable efforts to mitigate the impact of the Force Majeure Event and resume performance as soon as practicable.
+      </p>
+
+      <hr class="fancy" />
+
+      <div class="callout callout-success">
+        <strong>✅ A Personal Note from the Developer:</strong> Indo Pakhtoon Tech was built with a genuine passion for creating useful, accessible digital tools. These Terms exist not to create barriers between us and our users, but to establish a clear, honest, and legally sound framework that protects everyone involved. If you ever feel that a provision is unclear, unfair, or confusing, please reach out — we are always open to honest dialogue and continuous improvement of both our platform and our policies.
+      </div>
+
+      <p>
+        Thank you for taking the time to read these Terms in their entirety. Your trust in Indo Pakhtoon Tech is valued, and we are committed to honoring that trust through transparent practices, ethical conduct, and a relentless focus on delivering genuinely useful digital Services.
+      </p>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════
+         DOCUMENT VERSION HISTORY
+    ══════════════════════════════════════════════ -->
+    <section id="sec-version-history">
+      <div class="section-heading-row">
+        <span class="section-number" style="background:#718096;">V</span>
+        <h2>Document Version History</h2>
+      </div>
+
+      <table class="policy-table">
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Author</th>
+            <th>Summary of Changes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1.0</strong></td>
+            <td>June 1, 2025</td>
+            <td>Indo Pakhtoon Tech Developer</td>
+            <td>Initial publication of comprehensive Terms and Conditions covering all core Platform services, Google OAuth integration, voluntary donation and refund policy, intellectual property provisions, prohibited activities, governing law under Indian jurisdiction, and all supplementary provisions including DPDPA compliance, consumer rights, accessibility commitment, children's privacy, and monetization ethics.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Future versions of this document will be recorded in this version history table. Users may request access to archived prior versions by contacting the support team. The version number and effective date displayed at the top of this document always reflect the current, operative version of the Terms applicable to your use of the Services.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════
+       FINAL FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer>
+    <span class="footer-brand">Indo Pakhtoon Tech</span>
+
+    <p>
+      Independently operated — Uttar Pradesh, India  • 
+      Building ethical, transparent, and user-first digital experiences.
+    </p>
+
+    <p style="margin-top: 14px; font-size: 0.86rem;">
+      <strong>Support:</strong>
+      <a href="mailto:support@indopakhtoontech.com"
+         style="color: var(--accent-light); text-decoration: none;">
+        support@indopakhtoontech.com
+      </a>
+        |  
+      <strong>Legal:</strong>
+      <a href="mailto:legal@indopakhtoontech.com"
+         style="color: var(--accent-light); text-decoration: none;">
+        legal@indopakhtoontech.com
+      </a>
+        |  
+      <strong>Refunds:</strong>
+      <a href="mailto:refunds@indopakhtoontech.com"
+         style="color: var(--accent-light); text-decoration: none;">
+        refunds@indopakhtoontech.com
+      </a>
+    </p>
+
+    <div style="height:1px; background:rgba(255,255,255,0.12); margin: 22px auto; max-width: 560px;"></div>
+
+    <p style="font-size: 0.83rem; color: rgba(255,255,255,0.58); max-width: 800px; margin: 0 auto;">
+      © 2025 <strong style="color: var(--accent-light);">Indo Pakhtoon Tech</strong>.
+      All rights reserved. Unauthorized reproduction, redistribution, reverse engineering, or
+      commercial exploitation of any part of this Platform or its applications is strictly
+      prohibited and may result in civil and criminal liability under applicable Indian and
+      international law. These Terms and Conditions, together with all supplementary provisions,
+      constitute the complete legal framework governing your access to and use of our digital
+      Services.
+    </p>
+
+    <div style="margin-top: 18px; padding-top: 16px;
+                border-top: 1px solid rgba(255,255,255,0.10);
+                font-size: 0.80rem; color: rgba(255,255,255,0.42);
+                max-width: 820px; margin-left: auto; margin-right: auto;">
+      <p>
+        Indo Pakhtoon Tech  • 
+        Version 1.0  • 
+        Effective: June 1, 2025  • 
+        Jurisdiction: Uttar Pradesh, India  • 
+        Governing Law: Laws of the Republic of India
+      </p>
+      <p style="margin-top: 10px;">
+        By continuing to use the Platform after the effective date of these Terms, you
+        unconditionally confirm your full and informed acceptance of every provision
+        herein, including all supplementary sections, in their entirety, as an integral
+        part of the legal agreement governing your access to and use of all Indo Pakhtoon Tech
+        Services.
+      </p>
+    </div>
+  </footer>
