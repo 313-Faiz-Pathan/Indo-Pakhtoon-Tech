@@ -543,7 +543,7 @@
       + '<div class="app-card-footer" style="position:relative;z-index:1;">'
       +   '<span class="app-size">' + esc(app.size || 'N/A') + '</span>'
       +   '<a href="' + esc(app.downloadLink) + '" class="dl-btn" target="_blank" rel="noopener noreferrer"'
-      +     ' onclick="window.handleDownload('' + app.id + '', event)">'
+      +     ' onclick="window.handleDownload(\'' + app.id + '\', event)">'
       +     dlIconSVG() + 'Download'
       +   '</a>'
       + '</div>';
@@ -580,7 +580,7 @@
       +   '<div class="fc-dl-count app-dl-count">' + (dlCount > 0 ? '⬇ ' + formatNum(dlCount) + ' downloads' : 'Be first to download') + '</div>'
       +   '<div style="display:flex;gap:10px;flex-wrap:wrap;">'
       +     '<a href="' + esc(app.downloadLink) + '" class="btn-primary" style="font-size:13px;padding:9px 20px;"'
-      +       ' target="_blank" rel="noopener" onclick="window.handleDownload('' + app.id + '', event)">Download Free</a>'
+      +       ' target="_blank" rel="noopener" onclick="window.handleDownload(\'' + app.id + '\', event)">Download Free</a>'
       +   '</div>'
       + '</div>';
 
@@ -611,7 +611,7 @@
       +   '<div class="game-footer">'
       +     '<span class="badge badge-free">Free</span>'
       +     '<a href="' + esc(app.downloadLink) + '" class="dl-btn" style="padding:6px 14px;font-size:12px;"'
-      +       ' target="_blank" rel="noopener" onclick="window.handleDownload('' + app.id + '', event)">Get</a>'
+      +       ' target="_blank" rel="noopener" onclick="window.handleDownload(\'' + app.id + '\', event)">Get</a>'
       +   '</div>'
       + '</div>';
 
