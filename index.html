@@ -10,7 +10,6 @@
   <meta property="og:description" content="Browse and download utility apps and open-source tools — no registration required." />
   <meta property="og:type" content="website" />
   <title>Indo Pakhtoon Tech – Utility Apps & Digital Tools</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -25,29 +24,26 @@
   <!-- Scroll progress bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Background decorative grid -->
+  <!-- Background grid -->
   <div class="bg-grid" aria-hidden="true">
     <div class="bg-orb bg-orb-1"></div>
     <div class="bg-orb bg-orb-2"></div>
     <div class="bg-orb bg-orb-3"></div>
   </div>
 
-  <!-- Long press ring for secret admin trigger -->
+  <!-- Long press ring -->
   <div class="long-press-ring" id="longPressRing"></div>
 
-  <!-- Cloud Sync Status Bar (admin-only visible) -->
+  <!-- Cloud Sync Status Bar (admin-only) -->
   <div class="cloud-status-bar" id="cloudStatusBar">
     <div class="cloud-dot" id="cloudDot"></div>
     <span id="cloudStatusText">Syncing…</span>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       HEADER
-  ═══════════════════════════════════════ -->
+  <!-- ═══ HEADER ═══ -->
   <header class="header" id="mainHeader" role="banner">
     <div class="container">
       <div class="header-inner">
-
         <div class="header-left">
           <button class="hamburger" id="hamburgerBtn" aria-label="Open Menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -85,21 +81,19 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
             </svg>
           </button>
-          <button class="donate-btn" onclick="openDonateModal()">
+          <!-- FIXED: Support button with proper id -->
+          <button class="donate-btn" id="supportBtn" type="button" aria-label="Support Us">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
             </svg>
             <span class="donate-label">Support Us</span>
           </button>
         </div>
-
       </div>
     </div>
   </header>
 
-  <!-- ═══════════════════════════════════════
-       NAV RIBBON
-  ═══════════════════════════════════════ -->
+  <!-- ═══ NAV RIBBON ═══ -->
   <nav class="nav-ribbon" aria-label="Primary navigation">
     <div class="container">
       <div class="nav-ribbon-inner">
@@ -115,26 +109,24 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════
-       MOBILE DRAWER
-  ═══════════════════════════════════════ -->
+  <!-- ═══ MOBILE DRAWER ═══ -->
   <div class="mobile-nav-overlay" id="mobileOverlay" aria-hidden="true"></div>
   <aside class="mobile-nav-drawer" id="mobileDrawer" aria-label="Mobile navigation" aria-hidden="true">
     <div class="drawer-header">
-      <a href="#home" class="logo" onclick="closeMobileNav()">
+      <a href="#home" class="logo" id="drawerLogoLink">
         <div class="logo-icon" id="drawerLogoIcon">IP</div>
         <div class="logo-text">Indo Pakhtoon Tech<span>Open-Source Portal</span></div>
       </a>
-      <button class="drawer-close" onclick="closeMobileNav()" aria-label="Close menu">✕</button>
+      <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
     </div>
     <div class="drawer-links">
-      <a href="#home"        class="drawer-link active" onclick="closeMobileNav()"><span class="d-icon">⌂</span>Home</a>
-      <a href="#store"       class="drawer-link" onclick="closeMobileNav()"><span class="d-icon">🛒</span>Store</a>
-      <a href="#apps"        class="drawer-link" onclick="closeMobileNav()"><span class="d-icon">📱</span>Apps</a>
-      <a href="#games"       class="drawer-link" onclick="closeMobileNav()"><span class="d-icon">🎮</span>Games</a>
-      <a href="terms.html"   class="drawer-link" onclick="closeMobileNav()"><span class="d-icon">📄</span>Terms</a>
-      <a href="privacy.html" class="drawer-link" onclick="closeMobileNav()"><span class="d-icon">🔒</span>Privacy</a>
-      <a href="#contact"     class="drawer-link" onclick="closeMobileNav()"><span class="d-icon">✉</span>Contact</a>
+      <a href="#home"        class="drawer-link active" data-drawer-link>Home</a>
+      <a href="#store"       class="drawer-link" data-drawer-link>Store</a>
+      <a href="#apps"        class="drawer-link" data-drawer-link>Apps</a>
+      <a href="#games"       class="drawer-link" data-drawer-link>Games</a>
+      <a href="terms.html"   class="drawer-link">Terms</a>
+      <a href="privacy.html" class="drawer-link">Privacy</a>
+      <a href="#contact"     class="drawer-link" data-drawer-link>Contact</a>
     </div>
     <div class="drawer-footer">
       <div class="drawer-contact">
@@ -144,12 +136,10 @@
     </div>
   </aside>
 
-  <!-- ═══════════════════════════════════════
-       MAIN CONTENT
-  ═══════════════════════════════════════ -->
+  <!-- ═══ MAIN ═══ -->
   <main class="main-content" role="main">
 
-    <!-- Info Strip Marquee -->
+    <!-- Info Strip -->
     <div class="info-strip" aria-label="Platform highlights">
       <div class="marquee-track" aria-hidden="true">
         <span class="marquee-item"><span class="mi-dot"></span>100% Free Downloads — No Registration Required</span>
@@ -188,7 +178,6 @@
           <a href="#store" class="btn-secondary">Visit Store</a>
           <a href="https://wa.me/+919266242521" target="_blank" rel="noopener" class="btn-secondary btn-wa">Get Support</a>
         </div>
-        <!-- Dynamic Stats -->
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="val" id="statApps">0+</div>
@@ -213,7 +202,7 @@
       </div>
     </section>
 
-    <!-- ═══ EXPLORE BY CATEGORY ═══ -->
+    <!-- ═══ CATEGORIES ═══ -->
     <section class="section-pad" aria-labelledby="catHeading">
       <div class="container">
         <div class="section-header">
@@ -224,7 +213,7 @@
           <a href="#apps" class="view-all-link">See All Apps</a>
         </div>
         <div class="categories-grid" role="list">
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('ai')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="ai">
             <div class="cat-icon icon-purple">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/>
@@ -235,7 +224,7 @@
             <span class="cat-name">AI Tools</span>
             <span class="cat-count" id="catCount-ai">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('calculator')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="calculator">
             <div class="cat-icon icon-blue">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="4" y="2" width="16" height="20" rx="2"/>
@@ -247,7 +236,7 @@
             <span class="cat-name">Calculators</span>
             <span class="cat-count" id="catCount-calculator">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('finance')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="finance">
             <div class="cat-icon icon-green">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="1" x2="12" y2="23"/>
@@ -257,7 +246,7 @@
             <span class="cat-name">Finance</span>
             <span class="cat-count" id="catCount-finance">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('productivity')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="productivity">
             <div class="cat-icon icon-orange">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
@@ -266,7 +255,7 @@
             <span class="cat-name">Productivity</span>
             <span class="cat-count" id="catCount-productivity">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('education')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="education">
             <div class="cat-icon icon-cyan">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
@@ -276,7 +265,7 @@
             <span class="cat-name">Education</span>
             <span class="cat-count" id="catCount-education">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('games')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="games">
             <div class="cat-icon icon-red">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="6" width="20" height="12" rx="2"/>
@@ -287,7 +276,7 @@
             <span class="cat-name">Games</span>
             <span class="cat-count" id="catCount-games">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('health')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="health">
             <div class="cat-icon icon-pink">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -296,7 +285,7 @@
             <span class="cat-name">Health</span>
             <span class="cat-count" id="catCount-health">0 apps</span>
           </div>
-          <div class="category-card" role="listitem" tabindex="0" onclick="filterByCategory('utility')">
+          <div class="category-card" role="listitem" tabindex="0" data-cat="utility">
             <div class="cat-icon icon-teal">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
@@ -335,28 +324,25 @@
             <div class="section-label">Downloads</div>
             <h2 class="section-title" id="appsHeading">All Apps & Tools</h2>
           </div>
-          <a href="#" class="view-all-link" onclick="clearSearch();return false;">Show All</a>
+          <a href="#" class="view-all-link" id="showAllBtn">Show All</a>
         </div>
         <div class="filter-tabs" role="tablist">
-          <button class="filter-tab active" role="tab" aria-selected="true"  onclick="filterTab(this,'all')">All</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'ai')">AI</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'calculator')">Calculator</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'finance')">Finance</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'productivity')">Productivity</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'education')">Education</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'utility')">Utility</button>
-          <button class="filter-tab" role="tab" aria-selected="false" onclick="filterTab(this,'health')">Health</button>
+          <button class="filter-tab active" role="tab" aria-selected="true"  data-filter="all">All</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="ai">AI</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="calculator">Calculator</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="finance">Finance</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="productivity">Productivity</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="education">Education</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="utility">Utility</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="health">Health</button>
         </div>
-        <!-- Real apps render zone -->
         <div id="realAppsZone"></div>
-        <!-- No results -->
         <div class="no-results" id="noResults" role="status">
           <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
           <p>No apps found. Try a different keyword or category.</p>
         </div>
-        <!-- Empty state -->
         <div id="appsEmptyState" class="section-empty-state" style="display:none;">
           <div class="empty-icon">📦</div>
           <p>No apps uploaded yet.<br/><strong>Real apps will appear here once the admin publishes them.</strong></p>
@@ -395,8 +381,7 @@
           <div class="feature-card" role="listitem">
             <div class="feature-icon icon-blue">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>
               </svg>
             </div>
             <h3 class="feature-title">Always Free</h3>
@@ -452,16 +437,28 @@
       </div>
     </section>
 
-    <!-- ═══ CTA BAND ═══ -->
-    <div class="cta-band" aria-labelledby="ctaHeading">
+    <!-- ═══ CTA / NEWSLETTER ═══ -->
+    <div class="cta-band" id="newsletter" aria-labelledby="ctaHeading">
       <div class="container">
         <h2 id="ctaHeading">Stay in the Loop</h2>
         <p>Get notified when we add new apps, tools, and updates. Zero spam — we promise.</p>
-        <form class="newsletter-form" onsubmit="handleNewsletter(event)" novalidate>
+        <!-- FIXED: proper id attributes for JS targeting -->
+        <form class="newsletter-form" id="newsletterForm" novalidate>
           <label for="emailInput" class="sr-only">Email address</label>
-          <input type="email" id="emailInput" class="newsletter-input" placeholder="Enter your email…" required autocomplete="email" />
-          <button type="submit" class="btn-primary" style="white-space:nowrap;">Notify Me</button>
+          <input
+            type="email"
+            id="emailInput"
+            class="newsletter-input"
+            placeholder="Enter your email…"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn-primary" id="notifyMeBtn" style="white-space:nowrap;">
+            Notify Me
+          </button>
         </form>
+        <!-- Feedback message below form -->
+        <p id="newsletterMsg" style="margin-top:12px;font-size:13px;display:none;"></p>
       </div>
     </div>
 
@@ -501,9 +498,7 @@
 
   </main>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
@@ -515,13 +510,20 @@
           <p class="footer-desc">An open-access tech portal offering free utility apps, digital tools, and open-source software. No registration required — just browse and download.</p>
           <div class="social-links">
             <a href="https://wa.me/+919266242521" class="social-btn" target="_blank" rel="noopener" title="WhatsApp">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
             </a>
             <a href="mailto:pakhtoonvisionary27@gmail.com" class="social-btn" title="Email">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
             </a>
             <a href="https://github.com" class="social-btn" target="_blank" rel="noopener" title="GitHub">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
             </a>
           </div>
         </div>
@@ -552,19 +554,26 @@
           <h3 class="footer-col-title">Support the Project</h3>
           <div class="bank-box">
             <div class="bank-box-title">Voluntary Donation</div>
-            <div class="bank-row"><span class="bank-label">Holder</span><span class="bank-value">Sahil Khan</span></div>
+            <div class="bank-row">
+              <span class="bank-label">Holder</span>
+              <span class="bank-value">Sahil Khan</span>
+            </div>
             <div class="bank-row">
               <span class="bank-label">Account</span>
               <span class="bank-value">2055280031</span>
-              <button class="copy-btn" onclick="copyText('2055280031','Account number')">Copy</button>
+              <!-- FIXED: data-copy attribute pattern -->
+              <button class="copy-btn" data-copy="2055280031" data-label="Account number">Copy</button>
             </div>
             <div class="bank-row">
               <span class="bank-label">IFSC</span>
               <span class="bank-value">KKBK0005043</span>
-              <button class="copy-btn" onclick="copyText('KKBK0005043','IFSC code')">Copy</button>
+              <button class="copy-btn" data-copy="KKBK0005043" data-label="IFSC code">Copy</button>
             </div>
-            <div class="bank-row"><span class="bank-label">Bank</span><span class="bank-value">Kotak Mahindra</span></div>
-            <button class="btn-primary btn-full" onclick="openDonateModal()">Support Us</button>
+            <div class="bank-row">
+              <span class="bank-label">Bank</span>
+              <span class="bank-value">Kotak Mahindra</span>
+            </div>
+            <button class="btn-primary btn-full" id="footerSupportBtn" type="button">Support Us</button>
           </div>
         </div>
       </div>
@@ -572,7 +581,15 @@
       <div class="footer-bottom">
         <p class="copyright">
           © 2026 Indo Pakhtoon Tech  |  Developed by
-          <span class="secret-trigger" id="secretTrigger" role="button" tabindex="0" title="Admin Access">Faiz Pathan (Sahil Khan)</span>
+          <!-- FIXED: secret trigger with proper role -->
+          <span
+            class="secret-trigger"
+            id="secretTrigger"
+            role="button"
+            tabindex="0"
+            aria-label="Admin access"
+            title="Hold to access admin panel"
+          >Faiz Pathan (Sahil Khan)</span>
         </p>
         <div class="footer-bottom-links">
           <a href="terms.html">Terms</a>
@@ -584,7 +601,7 @@
     </div>
   </footer>
 
-  <!-- WhatsApp Float Button -->
+  <!-- WhatsApp Float -->
   <a href="https://wa.me/+919266242521" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp Support">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -593,7 +610,7 @@
   </a>
 
   <!-- Back to Top -->
-  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <button class="back-top" id="backTop" aria-label="Back to top">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <polyline points="18 15 12 9 6 15"/>
     </svg>
@@ -602,48 +619,77 @@
   <!-- Toast Container -->
   <div class="toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
 
-  <!-- ═══════════════════════════════════════
-       DONATE MODAL
-  ═══════════════════════════════════════ -->
+  <!-- ═══ DONATE / SUPPORT MODAL ═══ -->
   <div class="modal-overlay" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateModalTitle">
     <div class="modal-box">
-      <button class="modal-close" onclick="closeDonateModal()" aria-label="Close">×</button>
+      <button class="modal-close" id="donateModalClose" aria-label="Close modal">×</button>
       <div class="modal-emoji">💛</div>
       <h2 class="modal-title" id="donateModalTitle">Support Indo Pakhtoon Tech</h2>
       <p class="modal-sub">Your voluntary donation helps us keep everything free and open.</p>
       <div class="donate-bank-rows">
-        <div class="dbank-row"><span class="dbank-key">Account Holder</span><span class="dbank-val">Sahil Khan</span></div>
+        <div class="dbank-row">
+          <span class="dbank-key">Account Holder</span>
+          <span class="dbank-val">Sahil Khan</span>
+        </div>
         <div class="dbank-row">
           <span class="dbank-key">Account Number</span>
-          <div class="dbank-copy"><span class="dbank-val">2055280031</span><button class="copy-btn" onclick="copyText('2055280031','Account number')">Copy</button></div>
+          <div class="dbank-copy">
+            <span class="dbank-val">2055280031</span>
+            <button class="copy-btn" data-copy="2055280031" data-label="Account number">Copy</button>
+          </div>
         </div>
         <div class="dbank-row">
           <span class="dbank-key">IFSC Code</span>
-          <div class="dbank-copy"><span class="dbank-val">KKBK0005043</span><button class="copy-btn" onclick="copyText('KKBK0005043','IFSC code')">Copy</button></div>
+          <div class="dbank-copy">
+            <span class="dbank-val">KKBK0005043</span>
+            <button class="copy-btn" data-copy="KKBK0005043" data-label="IFSC code">Copy</button>
+          </div>
         </div>
-        <div class="dbank-row"><span class="dbank-key">Bank</span><span class="dbank-val">Kotak Mahindra Bank</span></div>
-        <div class="dbank-row"><span class="dbank-key">Account Type</span><span class="dbank-val">Savings</span></div>
+        <div class="dbank-row">
+          <span class="dbank-key">Bank</span>
+          <span class="dbank-val">Kotak Mahindra Bank</span>
+        </div>
+        <div class="dbank-row">
+          <span class="dbank-key">Account Type</span>
+          <span class="dbank-val">Savings</span>
+        </div>
+        <div class="dbank-row">
+          <span class="dbank-key">UPI ID</span>
+          <div class="dbank-copy">
+            <span class="dbank-val">sahilkhan@kotak</span>
+            <button class="copy-btn" data-copy="sahilkhan@kotak" data-label="UPI ID">Copy</button>
+          </div>
+        </div>
       </div>
-      <div class="modal-note">This is a voluntary donation. Indo Pakhtoon Tech does not charge for any app or service.</div>
+      <div class="modal-note">
+        This is a voluntary donation. Indo Pakhtoon Tech does not charge for any app or service. Every contribution, big or small, keeps this platform alive. 🙏
+      </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       ADMIN LOGIN MODAL
-  ═══════════════════════════════════════ -->
+  <!-- ═══ ADMIN LOGIN MODAL ═══ -->
   <div class="modal-overlay" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
     <div class="modal-box">
-      <button class="modal-close" onclick="closeAdminModal()" aria-label="Close">×</button>
+      <button class="modal-close" id="adminModalClose" aria-label="Close modal">×</button>
       <div class="modal-emoji">🛡</div>
       <h2 class="modal-title" id="adminModalTitle">Admin Access</h2>
       <p class="modal-sub">Restricted area. Authenticate to enter the control panel.</p>
       <div class="admin-form">
-        <input type="password" class="admin-input" id="adminPassInput" placeholder="Enter admin password…" autocomplete="current-password" aria-label="Admin password" />
-        <button class="btn-primary btn-full" onclick="verifyAdminPassword()">Login with Password</button>
+        <input
+          type="password"
+          class="admin-input"
+          id="adminPassInput"
+          placeholder="Enter admin password…"
+          autocomplete="current-password"
+          aria-label="Admin password"
+        />
+        <button class="btn-primary btn-full" id="adminLoginBtn" type="button">
+          Login with Password
+        </button>
         <div class="admin-divider">or continue with</div>
         <div id="googleSignInBtn"></div>
-        <button class="btn-secondary btn-full btn-google" onclick="initiateGoogleSignIn()">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="btn-secondary btn-full btn-google" id="googleManualBtn" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
             <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
             <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
@@ -651,14 +697,12 @@
           </svg>
           Sign in with Google
         </button>
-        <div class="admin-msg" id="adminMsg"></div>
+        <div class="admin-msg" id="adminMsg" role="alert"></div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       ADMIN DASHBOARD
-  ═══════════════════════════════════════ -->
+  <!-- ═══ ADMIN DASHBOARD ═══ -->
   <div class="admin-dashboard-overlay" id="adminDashboard" role="dialog" aria-modal="true" aria-labelledby="admDashTitle">
     <div class="admin-dashboard-panel">
 
@@ -679,12 +723,12 @@
             <div id="admCloudDot" class="adm-cloud-dot"></div>
             <span id="admCloudText">Offline</span>
           </div>
-          <button class="adm-close" onclick="closeAdminDashboard()" aria-label="Close dashboard">×</button>
+          <button class="adm-close" id="admCloseBtn" aria-label="Close dashboard">×</button>
         </div>
       </div>
 
       <div class="adm-tabs" role="tablist">
-        <button class="adm-tab active" role="tab" onclick="switchAdmTab(this,'admOverview')">
+        <button class="adm-tab active" role="tab" data-tab="admOverview">
           <span class="adm-tab-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
@@ -692,7 +736,7 @@
             </svg>
           </span>Overview
         </button>
-        <button class="adm-tab" role="tab" onclick="switchAdmTab(this,'admUpload')">
+        <button class="adm-tab" role="tab" data-tab="admUpload">
           <span class="adm-tab-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/>
@@ -700,7 +744,7 @@
             </svg>
           </span>Upload App
         </button>
-        <button class="adm-tab" role="tab" onclick="switchAdmTab(this,'admManage')">
+        <button class="adm-tab" role="tab" data-tab="admManage">
           <span class="adm-tab-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
@@ -709,7 +753,15 @@
             </svg>
           </span>Manage Apps
         </button>
-        <button class="adm-tab" role="tab" onclick="switchAdmTab(this,'admBranding')">
+        <button class="adm-tab" role="tab" data-tab="admSubscribers">
+          <span class="adm-tab-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </span>Subscribers
+        </button>
+        <button class="adm-tab" role="tab" data-tab="admBranding">
           <span class="adm-tab-icon">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="3"/>
@@ -727,19 +779,19 @@
             <div class="adm-stat-card"><div class="adm-stat-val" id="admStatReal">0</div><div class="adm-stat-lbl">Real Apps</div></div>
             <div class="adm-stat-card"><div class="adm-stat-val" id="admStatTotal">0</div><div class="adm-stat-lbl">Total Listed</div></div>
             <div class="adm-stat-card"><div class="adm-stat-val" id="admStatDl">0</div><div class="adm-stat-lbl">Downloads</div></div>
-            <div class="adm-stat-card"><div class="adm-stat-val">100%</div><div class="adm-stat-lbl">Free</div></div>
+            <div class="adm-stat-card"><div class="adm-stat-val" id="admStatSubs">0</div><div class="adm-stat-lbl">Subscribers</div></div>
           </div>
           <div class="adm-section-title">Quick Actions</div>
           <div class="adm-quick-actions">
-            <button class="adm-btn adm-btn-primary" onclick="switchAdmTab(document.querySelectorAll('.adm-tab')[1],'admUpload')">Upload New App</button>
-            <button class="adm-btn adm-btn-ghost" onclick="switchAdmTab(document.querySelectorAll('.adm-tab')[2],'admManage')">Manage Apps</button>
-            <button class="adm-btn adm-btn-ghost" onclick="switchAdmTab(document.querySelectorAll('.adm-tab')[3],'admBranding')">Edit Branding</button>
-            <button class="adm-btn adm-btn-ghost" onclick="manualCloudSync()" id="admSyncBtn">
+            <button class="adm-btn adm-btn-primary" data-goto-tab="admUpload">Upload New App</button>
+            <button class="adm-btn adm-btn-ghost" data-goto-tab="admManage">Manage Apps</button>
+            <button class="adm-btn adm-btn-ghost" data-goto-tab="admSubscribers">View Subscribers</button>
+            <button class="adm-btn adm-btn-ghost" data-goto-tab="admBranding">Edit Branding</button>
+            <button class="adm-btn adm-btn-ghost" id="admSyncBtn">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/>
                 <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
-              </svg>
-              Force Cloud Sync
+              </svg>Force Cloud Sync
             </button>
           </div>
           <div class="adm-section-title">Recently Added</div>
@@ -758,16 +810,17 @@
               <input type="text" class="adm-field" id="appName" placeholder="e.g. Super Calculator Pro" maxlength="60" />
             </div>
             <div class="adm-form-group">
-              <label class="adm-label" for="appIconFile">App Icon <span class="req">*</span></label>
-              <div class="adm-label-hint">📐 Recommended: Square PNG/JPG · Max File Size: 150 KB (prevents cloud sync failure)</div>
+              <label class="adm-label" for="appIconFile">
+                App Icon <span class="req">*</span>
+                <span class="adm-label-hint">📐 Square PNG/JPG · Max 150 KB</span>
+              </label>
               <div class="adm-file-wrap">
-                <input type="file" class="adm-file-input" id="appIconFile" accept="image/*" onchange="previewAppIcon(this)" />
+                <input type="file" class="adm-file-input" id="appIconFile" accept="image/*" />
                 <div class="adm-file-label">
                   <div class="adm-file-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                      <circle cx="8.5" cy="8.5" r="1.5"/>
-                      <polyline points="21 15 16 10 5 21"/>
+                      <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
                     </svg>
                   </div>
                   <span id="appIconLabelText">Click to select image…</span>
@@ -806,13 +859,15 @@
               </select>
             </div>
             <div class="adm-form-group adm-full">
-              <label class="adm-label" for="appDownloadLink">Direct Download Link <span class="req">*</span></label>
-              <div class="adm-label-hint">GitHub release URL or any direct file link that triggers download</div>
+              <label class="adm-label" for="appDownloadLink">
+                Download Link <span class="req">*</span>
+                <span class="adm-label-hint">Direct file URL — GitHub releases, Drive, etc.</span>
+              </label>
               <input type="url" class="adm-field" id="appDownloadLink" placeholder="https://github.com/user/repo/releases/download/v1.0/app.apk" />
             </div>
             <div class="adm-form-group adm-full">
               <label class="adm-label" for="appDesc">Description <span class="req">*</span></label>
-              <input type="text" class="adm-field" id="appDesc" placeholder="Briefly describe what this app does…" maxlength="120" />
+              <input type="text" class="adm-field" id="appDesc" placeholder="Briefly describe what this app does…" maxlength="160" />
             </div>
             <div class="adm-form-group">
               <label class="adm-label" for="appSize">File Size</label>
@@ -828,13 +883,19 @@
                 Mark as Featured App (shows in Spotlight section)
               </label>
             </div>
+            <div class="adm-form-group adm-full">
+              <label class="adm-label adm-label-check">
+                <input type="checkbox" id="appNotifySubscribers" class="adm-checkbox" checked />
+                Notify subscribers about this new app via email log
+              </label>
+            </div>
           </div>
           <div class="adm-form-actions">
-            <button class="adm-btn adm-btn-primary" onclick="uploadRealApp()">Publish App</button>
-            <button class="adm-btn adm-btn-ghost" onclick="clearUploadForm()">Clear Form</button>
+            <button class="adm-btn adm-btn-primary" id="publishAppBtn">Publish App</button>
+            <button class="adm-btn adm-btn-ghost" id="clearFormBtn">Clear Form</button>
           </div>
           <div class="adm-info-box">
-            <p><strong>Cloud Sync:</strong> After publishing, data is saved to JSONBin cloud. Download counters update globally in real-time for all visitors worldwide.</p>
+            <p><strong>Cloud Sync:</strong> After publishing, app data + subscriber notification log saved to JSONBin. Download counters update globally in real-time.</p>
           </div>
         </div>
 
@@ -844,10 +905,28 @@
           <div class="adm-alert" id="manageAlert"></div>
           <div class="adm-manage-header">
             <p>Total: <strong id="admRealCount">0</strong> app(s)</p>
-            <button class="adm-btn adm-btn-danger adm-btn-sm" onclick="clearAllRealApps()">Remove All</button>
+            <button class="adm-btn adm-btn-danger adm-btn-sm" id="removeAllAppsBtn">Remove All</button>
           </div>
           <div class="adm-app-list" id="admAppList">
             <div class="adm-empty"><div class="adm-empty-icon">🔒</div><p>No apps uploaded yet.</p></div>
+          </div>
+        </div>
+
+        <!-- SUBSCRIBERS -->
+        <div class="adm-section" id="admSubscribers">
+          <div class="adm-section-title">Email Subscribers</div>
+          <div class="adm-alert" id="subsAlert"></div>
+          <div class="adm-manage-header">
+            <p>Total subscribers: <strong id="subsCount">0</strong></p>
+            <button class="adm-btn adm-btn-ghost adm-btn-sm" id="exportSubsBtn">Export CSV</button>
+          </div>
+          <div class="adm-app-list" id="subsListEl">
+            <div class="adm-empty"><div class="adm-empty-icon">📭</div><p>No subscribers yet.</p></div>
+          </div>
+          <!-- Notification Log -->
+          <div class="adm-section-title" style="margin-top:28px;">Notification Log</div>
+          <div class="adm-app-list" id="notifLogEl" style="max-height:260px;">
+            <div class="adm-empty"><div class="adm-empty-icon">📋</div><p>No notifications sent yet.</p></div>
           </div>
         </div>
 
@@ -862,44 +941,42 @@
                 <div class="logo-preview-big" id="logoPreviewBig">IP</div>
               </div>
               <div class="logo-preview-info">
-                <p>The logo appears in the <strong>header</strong>, <strong>mobile drawer</strong>, and <strong>footer</strong>.</p>
+                <p>Logo appears in <strong>header</strong>, <strong>mobile drawer</strong>, and <strong>footer</strong>.</p>
                 <div class="logo-spec">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
                   </svg>
-                  Recommended: 512×512 px · Square PNG/JPG · Max 150 KB · Transparent BG preferred
+                  Recommended: 512×512 px · Square PNG/JPG · Max 150 KB · Transparent BG
                 </div>
               </div>
             </div>
             <div class="logo-options">
               <div>
-                <div class="adm-label" style="margin-bottom:4px;">Upload Logo Image (Canvas Auto-Resize — No Crop)</div>
-                <div class="adm-label-hint" style="margin-bottom:10px;">Image auto-fits to square with padding. No stretching or cropping ever.</div>
+                <div class="adm-label" style="margin-bottom:4px;">Upload Logo (Canvas Auto-Resize, No Crop)</div>
+                <div class="adm-label-hint" style="margin-bottom:10px;">Auto-fitted to square with padding. Never stretched or cropped.</div>
                 <div class="logo-option-row">
                   <div class="adm-file-wrap" style="flex:1;min-width:200px;">
-                    <input type="file" class="adm-file-input" id="logoFileInput" accept="image/*" onchange="previewLogoFile(this)" />
+                    <input type="file" class="adm-file-input" id="logoFileInput" accept="image/*" />
                     <div class="adm-file-label">
                       <div class="adm-file-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                           <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                          <circle cx="8.5" cy="8.5" r="1.5"/>
-                          <polyline points="21 15 16 10 5 21"/>
+                          <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
                         </svg>
                       </div>
-                      <span id="logoFileLabelText">Click to select logo image…</span>
+                      <span id="logoFileLabelText">Click to select logo…</span>
                     </div>
                   </div>
-                  <button class="adm-btn adm-btn-primary" onclick="applyLogoFile()">Apply Logo</button>
+                  <button class="adm-btn adm-btn-primary" id="applyLogoFileBtn">Apply Logo</button>
                 </div>
                 <img class="adm-file-preview" id="logoFilePreview" alt="Logo preview" />
               </div>
               <div class="logo-text-section">
                 <div class="adm-label" style="margin-bottom:4px;">Or Set Text / Initials</div>
-                <div class="adm-label-hint" style="margin-bottom:10px;">Enter up to 3 characters for text logo.</div>
                 <div class="logo-option-row">
                   <input type="text" class="adm-field" id="logoTextInput" placeholder="e.g. IP" maxlength="3" style="max-width:120px;" />
-                  <button class="adm-btn adm-btn-primary" onclick="applyLogoText()">Apply Text</button>
-                  <button class="adm-btn adm-btn-ghost" onclick="resetLogo()">Reset Default</button>
+                  <button class="adm-btn adm-btn-primary" id="applyLogoTextBtn">Apply Text</button>
+                  <button class="adm-btn adm-btn-ghost" id="resetLogoBtn">Reset Default</button>
                 </div>
               </div>
             </div>
