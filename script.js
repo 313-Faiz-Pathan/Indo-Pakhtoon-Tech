@@ -7,7 +7,7 @@
  * 4. Newsletter → saves to JSONBin cloud
  * 5. New app notification log for subscribers
  * 6. Global download counters via JSONBin
- * 7. Canvas auto-resize (no crop, 150KB limit)
+ * 7. Transparent canvas resizing with compact cloud-ready images
  * 8. Zero background polling for public visitors
  */
 
@@ -30,9 +30,8 @@
   const STORAGE_LOGO    = 'ipt_logo_v2';
 
   const CANVAS_SIZE     = 256;
-  const CANVAS_LOGO_SZ  = 512;
-  const CANVAS_PAD      = 24;
   const MAX_FILE_BYTES  = 150 * 1024;   // 150 KB
+  const MAX_IMAGE_DATA_URL_LENGTH = 40 * 1024;
   const DEBOUNCE_MS     = 1400;
 
   /* ═══════════════════════════════════════════════
@@ -135,13 +134,13 @@
   }
 
   /* ═══════════════════════════════════════════════
-     CANVAS IMAGE RESIZER (Fix #2)
-     "Contain" — preserves aspect ratio, adds padding,
-     never crops or stretches. Max 150 KB enforced.
+     CANVAS IMAGE RESIZER
+     Preserves aspect ratio and transparency, with a
+     compact output suitable for cloud storage.
   ═══════════════════════════════════════════════ */
   const offCanvas = $('iptCanvasOffscreen');
 
-  function resizeToSquare(file, size = CANVAS_SIZE, padding = CANVAS_PAD) {
+  function resizeToSquare(file, size = CANVAS_SIZE) {
     return new Promise((resolve, reject) => {
       if (file.size > MAX_FILE_BYTES) {
         reject(new Error(`FILE_TOO_LARGE:${(file.size / 1024).toFixed(0)}`));
@@ -154,20 +153,42 @@
         img.onerror = () => reject(new Error('Image decode error'));
         img.onload  = () => {
           const canvas = offCanvas;
-          canvas.width  = size;
-          canvas.height = size;
-          const ctx = canvas.getContext('2d');
-          ctx.clearRect(0, 0, size, size);
-          const area  = size - padding * 2;
-          const ratio = Math.min(area / img.width, area / img.height);
-          const dw    = img.width  * ratio;
-          const dh    = img.height * ratio;
-          const dx    = (size - dw) / 2;
-          const dy    = (size - dh) / 2;
-          ctx.imageSmoothingEnabled = true;
-          ctx.imageSmoothingQuality = 'high';
-          ctx.drawImage(img, dx, dy, dw, dh);
-          resolve(canvas.toDataURL('image/png', 0.92));
+          const maxSize = Math.min(size, CANVAS_SIZE);
+          const sizes = [...new Set([maxSize, 192, 128, 96, 64].filter(n => n <= maxSize))];
+          for (const outputSize of sizes) {
+            canvas.width = outputSize;
+            canvas.height = outputSize;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) {
+              reject(new Error('Canvas context unavailable'));
+              return;
+            }
+            ctx.clearRect(0, 0, outputSize, outputSize);
+            const ratio = Math.min(outputSize / img.width, outputSize / img.height);
+            const dw = img.width * ratio;
+            const dh = img.height * ratio;
+            const dx = (outputSize - dw) / 2;
+            const dy = (outputSize - dh) / 2;
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            ctx.drawImage(img, dx, dy, dw, dh);
+
+            for (const quality of [0.78, 0.66, 0.54]) {
+              const webp = canvas.toDataURL('image/webp', quality);
+              if (!webp.startsWith('data:image/webp')) break;
+              if (webp.length <= MAX_IMAGE_DATA_URL_LENGTH) {
+                resolve(webp);
+                return;
+              }
+            }
+
+            const png = canvas.toDataURL('image/png');
+            if (png.length <= MAX_IMAGE_DATA_URL_LENGTH) {
+              resolve(png);
+              return;
+            }
+          }
+          reject(new Error('Image could not be compressed below the storage limit'));
         };
         img.src = e.target.result;
       };
@@ -1014,7 +1035,7 @@ Sent to: ${subs.map(s => s.email).join(', ') || 'No subscribers yet'}`;
   on($('appIconFile'), 'change', async function () {
     const file = this.files[0]; if (!file) return;
     try {
-      const resized = await resizeToSquare(file, CANVAS_SIZE, CANVAS_PAD);
+      const resized = await resizeToSquare(file, CANVAS_SIZE);
       appIconDataUrl = resized;
       $('appIconLabelText').textContent = file.name + ' ✓ (auto-resized)';
       const prev = $('appIconPreview'); if (prev) { prev.src = resized; prev.classList.add('show'); }
@@ -1022,13 +1043,12 @@ Sent to: ${subs.map(s => s.email).join(', ') || 'No subscribers yet'}`;
       if (err.message.startsWith('FILE_TOO_LARGE')) {
         const kb = err.message.split(':')[1];
         showDashAlert('uploadAlert', `⚠ File too large (${kb} KB). Max allowed: 150 KB. Please compress and re-upload.`, 'error');
-        this.value = ''; appIconDataUrl = null;
       } else {
-        // Fallback: plain read
-        const reader = new FileReader();
-        reader.onload = e2 => { appIconDataUrl = e2.target.result; $('appIconLabelText').textContent = file.name; const p = $('appIconPreview'); if (p) { p.src = e2.target.result; p.classList.add('show'); } };
-        reader.readAsDataURL(file);
+        showDashAlert('uploadAlert', 'The app icon could not be resized for cloud storage. Please try another image.', 'error');
       }
+      this.value = ''; appIconDataUrl = null;
+      $('appIconLabelText').textContent = 'Click to select image…';
+      const prev = $('appIconPreview'); if (prev) { prev.src = ''; prev.classList.remove('show'); }
     }
   });
 
@@ -1038,7 +1058,7 @@ Sent to: ${subs.map(s => s.email).join(', ') || 'No subscribers yet'}`;
   on($('logoFileInput'), 'change', async function () {
     const file = this.files[0]; if (!file) return;
     try {
-      const resized = await resizeToSquare(file, CANVAS_LOGO_SZ, 32);
+      const resized = await resizeToSquare(file, CANVAS_SIZE);
       logoFileDataUrl = resized;
       $('logoFileLabelText').textContent = file.name + ' ✓ (auto-resized)';
       const prev = $('logoFilePreview'); if (prev) { prev.src = resized; prev.classList.add('show'); }
@@ -1047,16 +1067,13 @@ Sent to: ${subs.map(s => s.email).join(', ') || 'No subscribers yet'}`;
       if (err.message.startsWith('FILE_TOO_LARGE')) {
         const kb = err.message.split(':')[1];
         showDashAlert('brandingAlert', `⚠ File too large (${kb} KB). Max 150 KB.`, 'error');
-        this.value = ''; logoFileDataUrl = null;
       } else {
-        const reader = new FileReader();
-        reader.onload = e2 => {
-          logoFileDataUrl = e2.target.result; $('logoFileLabelText').textContent = file.name;
-          const p = $('logoFilePreview'); if (p) { p.src = e2.target.result; p.classList.add('show'); }
-          const b = $('logoPreviewBig'); if (b) b.innerHTML = `<img src="${e2.target.result}" alt="Logo preview" />`;
-        };
-        reader.readAsDataURL(file);
+        showDashAlert('brandingAlert', 'The logo could not be resized for cloud storage. Please try another image.', 'error');
       }
+      this.value = ''; logoFileDataUrl = null;
+      $('logoFileLabelText').textContent = 'Click to select image…';
+      const prev = $('logoFilePreview'); if (prev) { prev.src = ''; prev.classList.remove('show'); }
+      const big = $('logoPreviewBig'); if (big) big.innerHTML = '';
     }
   });
 
